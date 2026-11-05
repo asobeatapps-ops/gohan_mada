@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#244e42"><meta name="description" content="ごはんを持って、ゴールデンから逃げろ。広い平屋を舞台に遊ぶ無料3Dチェイスゲーム。">
-<title>ごはん、まだ！ Ver.1.7.1｜ASOBEAT</title>
+<title>ごはん、まだ！ Ver.1.6.0｜ASOBEAT</title>
 <style>
 :root{color-scheme:light;--ink:#264a3d;--paper:#fff9e9;--green:#2b6c53;--yellow:#f7cc70;--muted:#809283;--line:#dfe4d3}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ceded8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Noto Sans CJK JP',sans-serif}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation}button:focus-visible,a:focus-visible{outline:3px solid #e09943;outline-offset:4px}button{border:0}button:disabled{opacity:.5}h1,h2,h3,p{margin:0}[hidden]{display:none!important}#view{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}#gameUI{position:fixed;inset:0;pointer-events:none}#gameUI button,#gameUI #stick{pointer-events:auto}.brand{font-size:10px;font-weight:900;letter-spacing:.18em;display:flex;align-items:center;gap:8px}.brand i{width:8px;height:8px;border-radius:50%;background:var(--yellow)}.pill{background:#fff9e9ed;border:1px solid #fffc;border-radius:15px;box-shadow:0 3px 14px #244f3a12}.topbar{position:absolute;inset:max(16px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) auto max(18px,env(safe-area-inset-left));display:flex;justify-content:space-between;gap:10px;align-items:start}.icon-btn{width:43px;height:43px;border:1px solid #fff9;border-radius:50%;background:#fff9e9e8;color:#315a4a;display:grid;place-items:center;font-weight:850;font-size:16px}.time{padding:8px 18px 11px;min-width:143px;text-align:center}.time small{display:block;font-size:9px;color:#64816e;letter-spacing:.09em;font-weight:750}.time strong{font-size:31px;letter-spacing:-.055em;line-height:1.25;font-variant-numeric:tabular-nums}.time em{font-size:12px;font-style:normal;margin-left:4px}.viewbutton{height:43px;padding:0 13px;border-radius:30px;background:#fff9e9e8;color:#315a4a;font-size:11px;font-weight:850;border:1px solid #fff9}.room{position:absolute;left:19px;top:calc(max(16px,env(safe-area-inset-top)) + 94px);font-size:10px;letter-spacing:.04em;font-weight:800;background:#315a46c9;color:#fff8de;border:1px solid #ffffff33;border-radius:30px;padding:7px 11px}.mapbox{position:absolute;top:calc(max(16px,env(safe-area-inset-top)) + 59px);right:18px;width:119px;overflow:hidden;padding:6px;background:#fff9e9df;border:1px solid #fff9;border-radius:14px;box-shadow:0 3px 14px #23452f0c}.mapbox canvas{width:105px;height:88px;display:block}.maplegend{font-size:8px;display:flex;justify-content:center;gap:9px;font-weight:750;color:#64836e;margin:2px 0}.maplegend i{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:3px;background:#376e58}.maplegend .dog-dot{background:#d39135}#dogInfo{position:absolute;left:19px;top:calc(max(16px,env(safe-area-inset-top)) + 132px);padding:8px 10px;border-radius:11px;background:#fff9e9dd;color:#556c55;font-size:10px;line-height:1.6;font-weight:750;min-width:110px}#dogInfo b{display:block;color:#ad702c;font-size:15px;font-variant-numeric:tabular-nums}.warning{position:absolute;left:50%;top:29%;transform:translateX(-50%);white-space:nowrap;background:#f7cc70f0;color:#69451d;border:1px solid #fff0a5;border-radius:30px;padding:10px 17px;font-size:13px;font-weight:900;box-shadow:0 5px 20px #53441622}.warning.pant{background:#eaf2dfeF;color:#527557;border-color:#fff}.near-vignette{position:fixed;inset:0;pointer-events:none;box-shadow:inset 0 0 100px #d9823c66;opacity:0;transition:opacity .15s}.bottom-ui{position:absolute;left:max(20px,env(safe-area-inset-left));right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));height:160px}.stamina{position:absolute;left:0;right:0;bottom:0;width:min(50%,225px);padding:8px 11px;border:1px solid #ffffff66;background:#315840b8;color:#f5efd9;border-radius:12px;font-size:9px}.meter{height:6px;border-radius:99px;overflow:hidden;background:#ffffff2e;margin-top:5px}.meter i{display:block;height:100%;width:100%;border-radius:99px;background:#ecd482}.dash{position:absolute;right:0;bottom:0;width:90px;height:90px;border-radius:50%;background:linear-gradient(150deg,#ffe3a4,#ecc475);color:#6f4d24;border:3px solid #fff3cf;box-shadow:0 5px 0 #b58e53,0 6px 20px #5a522a33;display:flex;align-items:center;justify-content:center;flex-direction:column;touch-action:none;font-weight:900;font-size:15px}.dash small{font-size:9px;margin-top:5px}.dash.active{transform:translateY(3px);box-shadow:0 2px #b58e53;background:#f7dda0}.lookback{position:absolute;right:7px;bottom:110px;width:77px;min-height:35px;border-radius:25px;background:#fff9e9e0;border:1px solid #fff;color:#456450;font-size:10px;font-weight:800;touch-action:none}#stick{position:absolute;left:10px;bottom:49px;width:106px;height:106px;border:1.5px solid #fff9;border-radius:50%;background:#fff9e933;box-shadow:inset 0 0 0 17px #fff8e415;touch-action:none}#stickKnob{position:absolute;left:32px;top:32px;width:42px;height:42px;border-radius:50%;background:#fff9e9d9;border:1px solid #fffc;box-shadow:0 3px 10px #26503c30;pointer-events:none}.lookHint{position:absolute;right:115px;bottom:43px;writing-mode:vertical-rl;font-size:9px;letter-spacing:.16em;color:#fffdf0;text-shadow:0 1px 4px #34593a99;pointer-events:none}.pcHint{position:absolute;left:50%;bottom:23px;transform:translateX(-50%);font-size:10px;padding:9px 15px;border-radius:30px;color:#fdf3df;background:#214c3cbf;white-space:nowrap}body:not(.touch) #stick,body:not(.touch) .lookHint{display:none}body.touch .pcHint{display:none}#crosshair{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;background:#fff8e9bf;box-shadow:0 0 1px #244b3a77;pointer-events:none}#countdown{position:absolute;inset:0;display:grid;place-items:center;background:#fff7e51a;text-align:center;pointer-events:none}#countdown b{font-size:110px;letter-spacing:-.06em;color:#fff7dc;font-weight:1000;text-shadow:0 6px #2a583c6e,0 0 45px #305f484d;display:block}#countdown span{display:block;font-size:14px;font-weight:850;color:#fff9e4;text-shadow:0 2px 9px #264a39;margin-top:14px}.boom{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%) rotate(-7deg);font-size:clamp(32px,9vw,53px);font-weight:1000;letter-spacing:-.06em;color:#fff2b1;text-shadow:-2px -2px #5e462a,2px -2px #5e462a,-2px 2px #5e462a,2px 3px #5e462a,0 7px #5e462a55;pointer-events:none;white-space:nowrap}.toast{position:fixed;left:50%;bottom:calc(max(20px,env(safe-area-inset-bottom)) + 172px);transform:translateX(-50%);z-index:60;font-size:11px;line-height:1.7;font-weight:750;padding:10px 16px;border-radius:12px;background:#fff9e9ed;box-shadow:0 4px 20px #31533126;color:#486549;border:1px solid #fff;max-width:88vw;text-align:center;pointer-events:none}.splash{position:fixed;inset:0;z-index:10;pointer-events:none;background:linear-gradient(90deg,#fff5e9e6,#fff5e9c4 31%,#fff5e908 65%)}.splash>*{pointer-events:auto}.home-top{position:absolute;top:max(24px,env(safe-area-inset-top));left:max(26px,env(safe-area-inset-left));right:max(26px,env(safe-area-inset-right));display:flex;justify-content:space-between;align-items:center}.edition{font-size:9px;font-weight:750;letter-spacing:.06em;color:#547666;border:1px solid #54766633;border-radius:30px;padding:6px 9px;background:#ffffff5e}.home-copy{position:absolute;left:6.5%;top:16%;width:min(390px,46%)}.eyebrow{font-size:11px;letter-spacing:.14em;font-weight:850;color:#607f63;display:flex;align-items:center;gap:8px}.eyebrow:before{content:"";width:22px;height:2px;background:#b3904c}h1{font-size:clamp(50px,7.8vw,91px);font-weight:1000;letter-spacing:-.10em;line-height:1.16;margin:14px 0 19px;transform:rotate(-3deg);transform-origin:left;color:#284e3e}h1 span{display:inline-block;position:relative;z-index:0}h1 span:after{content:"";position:absolute;bottom:6px;left:3px;right:0;height:.16em;z-index:-1;background:#f4ce78;border-radius:10px;transform:rotate(2deg)}.home-sub{font-size:14px;line-height:1.95;color:#597058;font-weight:650}.home-sub strong{font-weight:850;color:#426145}.home-bottom{position:absolute;left:6.5%;bottom:7.5%;width:min(335px,43%)}.view-select{display:flex;gap:4px;border:1px solid #b9cbbb;background:#fffff568;padding:5px;border-radius:13px}.view-select button{flex:1;min-height:37px;border-radius:9px;background:transparent;font-size:12px;font-weight:800;color:#739079}.view-select button.active{background:#fffaf0;color:#315c47;box-shadow:0 2px 9px #47644118}.primary{display:block;width:100%;padding:15px 17px;min-height:53px;background:#2e6c50;color:#fff8df;border:1px solid #1c593f;border-radius:14px;font-size:15px;font-weight:850;box-shadow:0 4px 0 #194b35;touch-action:manipulation}.primary:active{transform:translateY(3px);box-shadow:0 1px #194b35}.secondary{min-height:42px;border:1px solid var(--line);background:#fffdf3;border-radius:11px;padding:10px 13px;color:#56705c;font-size:12px;font-weight:800}.quiet{background:none;color:#66856a;min-height:37px;padding:9px;font-size:11px;font-weight:750}.home-bottom .primary{margin-top:11px}.home-foot{display:flex;justify-content:space-between;gap:8px;margin-top:11px}.micro{font-size:9px;color:#809080;line-height:1.8}.home-credit{position:absolute;bottom:15px;right:22px;font-size:9px;color:#fff9df;text-shadow:0 1px 4px #38574199;letter-spacing:.06em}.modal{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-start;justify-content:center;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:max(22px,env(safe-area-inset-top)) 18px max(26px,env(safe-area-inset-bottom));background:#264c3b9c;backdrop-filter:blur(7px)}.panel{width:min(100%,438px);margin:auto;flex-shrink:0;background:var(--paper);border:1px solid #fff;border-radius:25px;padding:25px;box-shadow:0 20px 70px #173c364a}.panel h2{font-size:26px;letter-spacing:-.05em;margin:14px 0}.panel .subtitle{font-size:12px;color:#75866d;line-height:1.9;margin:10px 0 17px}.row{display:flex;gap:8px}.row>*{flex:1;min-width:0}.spaced{margin-top:12px}.rules{counter-reset:rules}.rule{padding:14px 0;display:flex;gap:13px;border-top:1px solid var(--line);font-size:12px;line-height:1.85;color:#62755e}.rule:before{counter-increment:rules;content:"0" counter(rules);font-size:11px;color:#b99557;letter-spacing:.07em;font-weight:900}.rule b{display:block;color:#355b43;font-size:13px}.setting{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding:15px 0;font-size:13px;font-weight:800}.setting small{display:block;margin-top:4px;font-size:10px;line-height:1.6;color:#82917d;font-weight:400}.setting input{width:23px;height:23px;accent-color:#478e68}.setting select{font:inherit;border:1px solid var(--line);border-radius:7px;background:#fffdf3;padding:8px;font-size:11px}.result-top{text-align:center}.stamp{display:inline-block;padding:5px 11px;border:1px solid #d9b980;background:#f5e8c4;border-radius:25px;font-size:10px;color:#a78342;font-weight:800;margin:10px 0}.result-top h2{font-size:29px;line-height:1.4;margin:8px 0}.result-time{font-size:74px;line-height:1.2;font-weight:950;letter-spacing:-.065em;color:#337559;font-variant-numeric:tabular-nums}.result-time small{font-size:16px;letter-spacing:0;margin-left:5px;color:#769377}.rank{font-size:12px;font-weight:800;margin:4px 0 15px;color:#799368}.result-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:13px 0 20px}.result-stats>div{text-align:center;border-radius:12px;background:#eaf0dd;color:#7b9272;padding:12px 4px;font-size:10px}.result-stats strong{display:block;font-size:22px;color:#496b4d;margin-top:4px;letter-spacing:-.04em}.result-note{font-size:11px;color:#809275;line-height:1.8;text-align:center;margin:9px 0 15px}.result-btns{display:grid;gap:11px}.card-img{width:100%;display:block;border-radius:11px;border:1px solid var(--line);margin:14px 0}.download{display:block;padding:12px;text-align:center;color:#43715b;border:1px solid var(--line);border-radius:10px;text-decoration:none;font-size:12px;font-weight:800}.error-code{font-size:10px;word-break:break-all;line-height:1.8;color:#97794f;margin:12px 0}#loader{position:fixed;inset:0;z-index:99;background:var(--paper);display:flex;justify-content:center;align-items:center;flex-direction:column;gap:18px}.loadbar{width:150px;height:4px;background:#e3e9d7;border-radius:10px;overflow:hidden}.loadbar i{display:block;height:100%;width:60%;background:#87ac89;animation:load 1.2s ease-in-out infinite alternate}@keyframes load{to{transform:translateX(70%)}}#loadMessage{font-size:11px;color:#7a9276}.caught-banner{position:fixed;inset:0;z-index:15;pointer-events:none;display:grid;place-items:center;background:#ffe8b620}.caught-banner strong{font-size:64px;letter-spacing:.07em;color:#fff9df;font-weight:1000;text-shadow:0 5px #5d49346e,0 0 45px #644a2866;transform:rotate(-6deg)}.caught-banner span{display:block;text-align:center;font-size:14px;color:#fffaf0;text-shadow:0 2px 8px #3b572b;font-weight:800;margin-top:15px}.orient{font-size:9px;color:#83967a;margin-top:10px;text-align:center}#resultReason{min-height:18px}body.reduced *{animation:none!important;transition:none!important}@media(max-width:700px) and (orientation:portrait){.splash{background:linear-gradient(180deg,#fff7e7eF 0,#fff7e7d4 18%,#fff7e751 43%,#fff7e701 56%,#e5eaca11 72%,#fff5e7eb 100%)}.home-top{top:max(19px,env(safe-area-inset-top));left:24px;right:24px}.home-copy{left:26px;top:11.5%;width:80%}h1{font-size:63px;line-height:1.08;margin:12px 0 11px}.eyebrow{font-size:10px}.home-sub{font-size:12px;line-height:1.85}.home-bottom{left:24px;right:24px;bottom:max(25px,env(safe-area-inset-bottom));width:auto}.view-select{max-width:272px;margin:0 auto}.home-bottom .primary{font-size:16px;min-height:53px}.home-credit{display:none}.home-foot{margin-top:8px}.orient{display:none}}@media(max-height:680px){.bottom-ui{bottom:13px}.time strong{font-size:25px}.time{min-width:125px}.mapbox{width:104px}.mapbox canvas{width:90px;height:77px}.room{top:91px}.home-copy{top:11%}h1{font-size:54px}.home-sub{font-size:11px}.home-bottom{bottom:17px}.dash{width:80px;height:80px;font-size:14px}.lookback{bottom:97px}.stamina{width:185px}.panel{padding:20px}}@media(max-height:490px) and (orientation:landscape){.home-copy{top:16%;left:5%}h1{font-size:53px;margin:8px 0}.home-sub{display:none}.home-bottom{bottom:8%;left:5%;width:285px}.home-top{top:15px}.home-credit{display:none}.time{padding:5px 15px}.time strong{font-size:24px}.time small{font-size:8px}.mapbox{top:68px;width:97px;right:13px;padding:5px}.mapbox canvas{width:85px;height:69px}.maplegend{font-size:7px}.room{top:74px}.bottom-ui{height:130px;bottom:13px}.dash{width:71px;height:71px;font-size:12px}.lookback{bottom:85px;width:72px;min-height:31px}.stamina{width:140px}#stick{bottom:40px;width:86px;height:86px}#stickKnob{left:22px;top:22px}.lookHint{right:93px;bottom:22px}#dogInfo{top:113px;font-size:9px;min-width:95px}.warning{top:26%;font-size:11px}.panel{max-width:420px}.pcHint{bottom:16px;font-size:9px}}
 #help,#settings{z-index:40}#shareModal{z-index:45}#error{z-index:100}
@@ -70,6 +70,13 @@ body.touch .pcHint{display:none}
 .chaos-summary{margin-top:8px}
 .chaos-summary strong{color:#a6682d!important}
 #view{touch-action:none}
+
+/* ASOBEAT navigation and results-only ad slot. Ad intentionally hidden until approval. */
+.asobeat-home-link{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;position:relative;z-index:2;touch-action:manipulation}
+.asobeat-home-link:focus-visible,.more-games-link:focus-visible{outline:3px solid #b99557;outline-offset:3px}
+.more-games-link{display:flex;align-items:center;justify-content:center;text-decoration:none;text-align:center;background:#e4f2e6;border:1px solid #80ae95;color:#265e41;border-radius:12px;font-size:14px;font-weight:900;min-height:48px;padding:12px;touch-action:manipulation}
+.result-ad-slot{display:block;margin:24px auto 0;max-width:100%;text-align:center;min-height:0}
+.result-ad-slot[hidden]{display:none!important}
 </style>
 </head><body>
 <canvas id="view" aria-label="広い平屋を逃げ回る3Dゲーム"></canvas>
@@ -87,27 +94,27 @@ body.touch .pcHint{display:none}
  <div id="boom" class="boom" hidden>バァン！</div>
 </div>
 <section id="home" class="splash" hidden>
- <div class="home-top"><div class="brand"><i></i> ASOBEAT</div><div class="edition">PIXEL CHASE / Ver.1.7.1</div></div>
+ <div class="home-top"><a class="brand asobeat-home-link" href="https://asobeatapps-ops.github.io/gamehome/" aria-label="ASOBEAT ゲームホームへ戻る"><i></i> ASOBEAT</a><div class="edition">PIXEL CHASE / Ver.1.6.0</div></div>
  <div class="home-copy"><div class="eyebrow">ぐるぐる逃げても、犬は学習する。</div><h1>ごはん、<br><span>まだ！</span></h1><p class="home-sub">その手のカリカリ、もうバレてます。<br>逃げるあなた。追う愛犬。<br><strong>犠牲になるのは、家。そしてソファ。</strong></p></div>
  <div class="home-bottom"><p class="onehand-slogan">📱 どこからでもスワイプ。速度一定、カメラ固定。</p><button id="startBtn" class="primary">ごはんを持って、逃げる！　→</button><div class="home-foot"><button class="quiet" id="howBtn">あそび方</button><button class="quiet" id="settingsBtn">音・画質</button><button class="quiet" id="bestLabel">最高 0.00 秒</button></div><p class="orient">触れた位置から指を動かすだけ。歩く・走るの切り替えなし。</p></div>
  <div class="home-credit">オリジナル3Dモデル / 犬にも人にも、ケガはありません。</div>
 </section>
-<section class="modal" id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel"><div class="brand"><i></i> HOW TO PLAY</div><h2 id="helpTitle">待て、が通じない。</h2><div class="rules"><div class="rule"><div><b>すでに、見つかっています。</b>3・2・1で開始。広い平屋を逃げ回り、捕まるまでの時間で勝負。</div></div><div class="rule"><div><b>親指ひとつで、走る。</b>好きな場所に触れ、動かした方向へ走ります。スピードは常に一定、指を離すと停止します。</div></div><div class="rule"><div><b>ドアと家具を味方に。</b>室内の引き戸は近づくと開き、通った後に閉まります。犬は壁・家具・外壁まで、触れて0.5秒で突進して壊します。段ボール・空のケージはぶつかって壊すこともできます。</div></div><div class="rule"><div><b>20秒から家が大騒ぎ！</b>暴走ゴールデン・家具ドミノ・段ボール犬に加え、同じ場所を回ると犬が学習。薄い間仕切りを破壊し、ソファまで飛び越えます。</div></div></div><p class="subtitle">PC：WASD／矢印キーで移動。速度一定、視点固定。Escで一時停止。</p><button id="closeHelp" class="primary">わかった！</button></div></section>
+<section class="modal" id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel"><div class="brand"><i></i> HOW TO PLAY</div><h2 id="helpTitle">待て、が通じない。</h2><div class="rules"><div class="rule"><div><b>すでに、見つかっています。</b>3・2・1で開始。広い平屋を逃げ回り、捕まるまでの時間で勝負。</div></div><div class="rule"><div><b>親指ひとつで、走る。</b>好きな場所に触れ、動かした方向へ走ります。スピードは常に一定、指を離すと停止します。</div></div><div class="rule"><div><b>ドアと家具を味方に。</b>室内の引き戸は近づくと開き、通った後に閉まります。犬は閉じた戸を破壊します。段ボール・空のケージはぶつかって壊すこともできます。</div></div><div class="rule"><div><b>20秒から家が大騒ぎ！</b>暴走ゴールデン・家具ドミノ・段ボール犬に加え、同じ場所を回ると犬が学習。薄い間仕切りを破壊し、ソファまで飛び越えます。</div></div></div><p class="subtitle">PC：WASD／矢印キーで移動。速度一定、視点固定。Escで一時停止。</p><button id="closeHelp" class="primary">わかった！</button></div></section>
 <section class="modal" id="settings" hidden role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><div class="panel"><div class="brand"><i></i> SETTINGS</div><h2 id="settingsTitle">ちょうどいい遊び心地に。</h2><label class="setting"><span>効果音・BGM<small>最初は端末の音量を小さめに。</small></span><input id="soundOpt" type="checkbox"></label><label class="setting"><span>動きを控える<small>カメラの揺れを抑えます。</small></span><input id="motionOpt" type="checkbox"></label><label class="setting"><span>画質<small>重いときは軽量モードを選んでください。</small></span><select id="qualityOpt"><option value="auto">自動</option><option value="high">高画質</option><option value="low">軽量</option></select></label><p id="renderStatus" class="micro"></p><p class="subtitle">ゲーム内のタイマーは一時停止中には進みません。記録はこのブラウザだけに保存されます。</p><button class="primary" id="closeSettings">閉じる</button></div></section>
 <section class="modal" id="pause" hidden role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><div class="panel"><div class="brand"><i></i> TAKE A BREATH</div><h2 id="pauseTitle">ごはんは、まだ守れてる。</h2><p class="subtitle">時間も犬も、ここでひと休み。</p><button id="resumeBtn" class="primary">つづきから</button><div class="row spaced"><button id="retryPause" class="secondary">最初から</button><button id="pauseSettings" class="secondary">音・画質</button></div><button id="quitBtn" class="quiet" style="width:100%;margin-top:10px">タイトルに戻る</button></div></section>
-<div id="caughtBanner" class="caught-banner" hidden><div><strong id="caughtBannerText">確保。</strong><span id="caughtBannerSub">はい、ごちそうさま。</span></div></div>
-<section class="modal" id="results" hidden role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="panel"><div class="brand"><i></i> ごはん、まだ！</div><div class="result-top"><span class="stamp" id="recordTag">本日のごはん係</span><h2 id="resultTitle">ごはんは、<br>守れなかった。</h2><div class="result-time"><span id="finalTime">0.00</span><small>秒</small></div><div class="rank" id="rank">おやつ見習い</div></div><div class="result-money"><small>家の被害総額（架空の修理費）</small><strong id="finalMoney">¥0</strong></div><div class="result-stats"><div>壊れた・倒れたもの<strong id="finalDamage">0 か所</strong></div><div>自己ベスト<strong id="finalBest">0.00 秒</strong></div></div><p class="result-note" id="resultReason">犬は元気です。家は、まあ、その。</p><div class="result-btns"><button id="againBtn" class="primary">もう一度、逃げる</button><button id="shareBtn" class="secondary">結果画像と一緒にXで共有</button><button id="homeBtn" class="secondary">タイトルへ</button></div><p class="micro" style="text-align:center;margin-top:15px">同じ家・同じルール。被害額はゲーム内の架空の修理費です。</p></div></section>
+<div id="caughtBanner" class="caught-banner" hidden><div><strong>確保。</strong><span>はい、ごちそうさま。</span></div></div>
+<section class="modal" id="results" hidden role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="panel"><a class="brand asobeat-home-link" href="https://asobeatapps-ops.github.io/gamehome/" aria-label="ASOBEAT ゲームホームへ戻る"><i></i> ごはん、まだ！ / ASOBEAT</a><div class="result-top"><span class="stamp" id="recordTag">本日のごはん係</span><h2 id="resultTitle">ごはんは、<br>守れなかった。</h2><div class="result-time"><span id="finalTime">0.00</span><small>秒</small></div><div class="rank" id="rank">おやつ見習い</div></div><div class="result-money"><small>家の被害総額（架空の修理費）</small><strong id="finalMoney">¥0</strong></div><div class="result-stats"><div>壊れた・倒れた家具<strong id="finalDamage">0 か所</strong></div><div>自己ベスト<strong id="finalBest">0.00 秒</strong></div></div><div class="result-stats chaos-summary"><div>壁の近道<strong id="finalWalls">0 回</strong></div><div>ソファジャンプ<strong id="finalLeaps">0 回</strong></div></div><p class="result-note" id="resultReason">犬は元気です。家は、まあ、その。</p><div class="result-btns"><button id="againBtn" class="primary">もう一度、逃げる</button><button id="shareBtn" class="secondary">結果画像と一緒にXで共有</button><a class="more-games-link" href="https://asobeatapps-ops.github.io/gamehome/">🎮 他のゲームも遊んでみる →</a><button id="homeBtn" class="secondary">タイトルへ</button></div><p class="micro" style="text-align:center;margin-top:15px">同じ家・同じルール。被害額はゲーム内の架空の修理費です。</p><aside id="resultAdSlot" class="result-ad-slot" hidden aria-label="広告掲載エリア"><!-- AdSense承認後、公式広告コードをここに設置しhidden属性を解除してください。 --></aside></div></section>
 <section class="modal" id="shareModal" hidden role="dialog" aria-modal="true" aria-labelledby="shareTitle"><div class="panel"><div class="brand"><i></i> MY ESCAPE RECORD</div><h2 id="shareTitle">この家のことは、内緒で。</h2><img id="cardImg" class="card-img" alt="逃げた時間・被害総額・壊れた家具数の記録カード"><button class="primary" id="nativeShare">画像＋文章を共有</button><div class="row spaced"><a id="cardSave" class="download" download="gohan-mada-result.png">画像を保存</a><button id="openX" class="secondary">Xを開く</button></div><button id="copyText" class="quiet" style="width:100%">投稿文をコピー</button><p class="micro">画像が自動添付されない場合は、画像を保存してXに添付してください。公開前のローカルファイルにはゲームURLを付けません。</p><button id="closeShare" class="secondary spaced" style="width:100%">閉じる</button></div></section>
 <div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
 <div class="modal" id="error" hidden><div class="panel"><h2>ゲームを一時停止しました</h2><p id="errorMessage" class="subtitle"></p><code id="errorDetail" class="error-code"></code><button id="reloadBtn" class="primary" onclick="location.reload()">再読み込み</button><button id="safeReloadBtn" class="secondary spaced" style="width:100%" onclick="window.BOOT.retry(true)">軽量・互換モードで開き直す</button><p class="micro spaced">ファイルアプリやアプリ内プレビューではなく、公開URLをSafariで開いてください。</p></div></div>
-<div id="loader"><div class="brand"><i></i> ASOBEAT</div><div class="loadbar"><i id="loadProgress"></i></div><p id="loadMessage" role="status" aria-live="polite">ゲームを読み込んでいます。</p><p id="loadPercent" class="micro">Ver.1.7.1 / 0%</p><div id="loadRecovery" hidden><p class="subtitle">時間がかかっています。軽量モードでも試せます。</p><button class="secondary" onclick="window.BOOT.retry(true)">軽量で再読み込み</button></div><noscript><style>.loadbar,#loadMessage,#loadPercent{display:none}</style><p style="max-width:300px;line-height:1.8;font-size:13px">この画面はゲームのプレビューです。GitHub Pagesの公開URLをSafariで開いてください。JavaScriptが有効なブラウザが必要です。</p></noscript></div>
+<div id="loader"><div class="brand"><i></i> ASOBEAT</div><div class="loadbar"><i id="loadProgress"></i></div><p id="loadMessage" role="status" aria-live="polite">ゲームを読み込んでいます。</p><p id="loadPercent" class="micro">Ver.1.6.0 / 0%</p><div id="loadRecovery" hidden><p class="subtitle">時間がかかっています。軽量モードでも試せます。</p><button class="secondary" onclick="window.BOOT.retry(true)">軽量で再読み込み</button></div><noscript><style>.loadbar,#loadMessage,#loadPercent{display:none}</style><p style="max-width:300px;line-height:1.8;font-size:13px">この画面はゲームのプレビューです。GitHub Pagesの公開URLをSafariで開いてください。JavaScriptが有効なブラウザが必要です。</p></noscript></div>
 <script>
 // Registered before the renderer or model scripts: startup errors never leave a silent loader.
 (function(){
  var ready=false,stage='ファイルの読み込み',timer=0;
  function fail(message){if(ready)return;clearTimeout(timer);document.getElementById('loader').hidden=true;document.getElementById('error').hidden=false;document.getElementById('errorMessage').textContent='3Dの準備を完了できませんでした。軽量・互換モードをお試しください。';document.getElementById('errorDetail').textContent=stage+' / '+String(message).slice(0,300);}
  window.BOOT={
- stage:function(p,msg){stage=msg;document.getElementById('loadMessage').textContent=msg;document.getElementById('loadPercent').textContent='Ver.1.7.1 / '+p+'%';document.getElementById('loadProgress').style.width=p+'%';},
+ stage:function(p,msg){stage=msg;document.getElementById('loadMessage').textContent=msg;document.getElementById('loadPercent').textContent='Ver.1.6.0 / '+p+'%';document.getElementById('loadProgress').style.width=p+'%';},
  complete:function(){ready=true;clearTimeout(timer);},fail:fail,
  retry:function(safe){var u=new URL(location.href);if(safe)u.searchParams.set('render','compat');u.searchParams.set('build','1.6.0');location.replace(u.href);}
  };
@@ -134,7 +141,7 @@ const G3=(()=>{
  function trs(p,r=[0,0,0],s=[1,1,1]){return mul(trans(...p),mul(rot(r[1],1),mul(rot(r[0],0),mul(rot(r[2],2),scale(...s)))))}
  function transform(m,p,w=1){return [m[0]*p[0]+m[4]*p[1]+m[8]*p[2]+m[12]*w,m[1]*p[0]+m[5]*p[1]+m[9]*p[2]+m[13]*w,m[2]*p[0]+m[6]*p[1]+m[10]*p[2]+m[14]*w]}
  function look(eye,target){const z=norm(sub(eye,target)),x=norm(cross([0,1,0],z)),y=cross(z,x);let m=id();m[0]=x[0];m[1]=y[0];m[2]=z[0];m[4]=x[1];m[5]=y[1];m[6]=z[1];m[8]=x[2];m[9]=y[2];m[10]=z[2];m[12]=-dot(x,eye);m[13]=-dot(y,eye);m[14]=-dot(z,eye);return m}
- function perspective(fov,aspect,near=.22,far=95){const f=1/Math.tan(fov/2),m=new Float32Array(16);m[0]=f/aspect;m[5]=f;m[10]=(far+near)/(near-far);m[11]=-1;m[14]=2*far*near/(near-far);return m}
+ function perspective(fov,aspect,near=.045,far=95){const f=1/Math.tan(fov/2),m=new Float32Array(16);m[0]=f/aspect;m[5]=f;m[10]=(far+near)/(near-far);m[11]=-1;m[14]=2*far*near/(near-far);return m}
  function ortho(l,r,b,t,n,f){let m=id();m[0]=2/(r-l);m[5]=2/(t-b);m[10]=-2/(f-n);m[12]=-(r+l)/(r-l);m[13]=-(t+b)/(t-b);m[14]=-(f+n)/(f-n);return m}
  const rgb=hex=>{if(Array.isArray(hex))return hex;const s=hex.replace('#',''),n=parseInt(s,16);return [(n>>16&255)/255,(n>>8&255)/255,(n&255)/255]};
  const cache=new Map();
@@ -178,7 +185,7 @@ const G3=(()=>{
   vec3 n=normalize(vN);if(!gl_FrontFacing)n=-n;
   vec3 color=vC*uTint;float alpha=uAlpha;
   if(uUseTex>.5&&uUseTex<1.5){vec4 tex=texture2D(uTex,vUV);color*=tex.rgb;alpha*=tex.a;}
-  if(vKind>.5&&vKind<1.5){float row=floor(vWorld.z/.24);float seam=smoothstep(.010,.025,min(fract(vWorld.z/.24),1.-fract(vWorld.z/.24))*.24);float crossline=smoothstep(.003,.013,min(fract((vWorld.x+mod(row,3.)*.75)/2.7),1.-fract((vWorld.x+mod(row,3.)*.75)/2.7))*2.7);float grain=sin(vWorld.x*7.+sin(vWorld.z*6.)*.5)*.008;color*=.89+.09*seam*crossline+grain+mod(row,4.)*.012;}
+  if(vKind>.5&&vKind<1.5){float row=floor(vWorld.z/.24);float seam=smoothstep(.010,.025,min(fract(vWorld.z/.24),1.-fract(vWorld.z/.24))*.24);float crossline=smoothstep(.003,.013,min(fract((vWorld.x+mod(row,3.)*.75)/2.7),1.-fract((vWorld.x+mod(row,3.)*.75)/2.7))*2.7);float grain=sin(vWorld.x*29.+sin(vWorld.z*31.)*.5)*.012;color*=.89+.09*seam*crossline+grain+mod(row,4.)*.012;}
   if(vKind>1.5&&vKind<2.5)color*=.94+.06*step(.42,fract(vWorld.x*30.));
   if(vKind>2.5&&vKind<3.5){float r=length((vUV-.5)*2.);alpha*=max(0.,1.-r*r);}
   if(alpha<.008)discard;
@@ -266,7 +273,7 @@ const G3=(()=>{
 
 </script>
 <script>
-/* Gohan Mada! - single-floor destructible world and chase simulation. */
+/* Gohan Mada! - fixed house, two-floor navigation and gameplay simulation. */
 'use strict';
 const CHASE=(()=>{
  const FLOOR=3.6,STEP=.4,MINX=-11.38,MINZ=-9.38,NX=58,NZ=48;
@@ -274,18 +281,9 @@ const CHASE=(()=>{
  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),dist=(a,b)=>Math.hypot(a.x-b.x,a.z-b.z),mix=(a,b,t)=>a+(b-a)*t;
  const walls=[],furniture=[],breakables=[];
  const rect=(x,z,w,d,y,h,extra={})=>({x,z,w,d,y,h,...extra});
- function wall(x,z,w,d,f=0,h=3.6){
-  const outer=Math.abs(x)>11.95||Math.abs(z)>9.95;
-  const long=Math.max(w,d),parts=Math.max(1,Math.ceil(long/2.3));
-  for(let i=0;i<parts;i++){
-    const offset=(i+.5-parts/2)*long/parts;
-    const acrossX=w>=d;
-    walls.push(rect(x+(acrossX?offset:0),z+(acrossX?0:offset),acrossX?w/parts:w,acrossX?d:d/parts,0,h,
-      {kind:outer?'outerwall':'wall',floor:0,outer,label:outer?'家の外壁':'室内の壁',segment:i}));
-  }
-}
- function wallX(z,x0,x1,doors){let cur=x0;for(const p of doors.sort((a,b)=>a[0]-b[0])){if(p[0]>cur)wall((p[0]+cur)/2,z,p[0]-cur,.20);{const at=walls.length;wall((p[0]+p[1])/2,z,p[1]-p[0],.20,0,.62);for(let j=at;j<walls.length;j++)walls[j].y=2.98;}cur=p[1];}if(cur<x1)wall((cur+x1)/2,z,x1-cur,.20);}
- function wallZ(x,z0,z1,doors){let cur=z0;for(const p of doors.sort((a,b)=>a[0]-b[0])){if(p[0]>cur)wall(x,(p[0]+cur)/2,.20,p[0]-cur);{const at=walls.length;wall(x,(p[0]+p[1])/2,.20,p[1]-p[0],0,.62);for(let j=at;j<walls.length;j++)walls[j].y=2.98;}cur=p[1];}if(cur<z1)wall(x,(cur+z1)/2,.20,z1-cur);}
+ function wall(x,z,w,d,f=0,h=3.6){walls.push(rect(x,z,w,d,0,h,{kind:'wall',floor:0}));}
+ function wallX(z,x0,x1,doors){let cur=x0;for(const p of doors.sort((a,b)=>a[0]-b[0])){if(p[0]>cur)wall((p[0]+cur)/2,z,p[0]-cur,.20);wall((p[0]+p[1])/2,z,p[1]-p[0],.20,0,.62);walls[walls.length-1].y=2.98;cur=p[1];}if(cur<x1)wall((cur+x1)/2,z,x1-cur,.20);}
+ function wallZ(x,z0,z1,doors){let cur=z0;for(const p of doors.sort((a,b)=>a[0]-b[0])){if(p[0]>cur)wall(x,(p[0]+cur)/2,.20,p[0]-cur);wall(x,(p[0]+p[1])/2,.20,p[1]-p[0],0,.62);walls[walls.length-1].y=2.98;cur=p[1];}if(cur<z1)wall(x,(cur+z1)/2,.20,z1-cur);}
  // The stage is approximately 24m x 20m, entirely on the ground floor.
  // Every major zone has two or more exits: no upstairs or unavoidable dead ends.
  wall(-12,0,.25,20);wall(12,0,.25,20);wall(0,-10,24,.25);wall(0,10,24,.25);
@@ -319,8 +317,6 @@ const CHASE=(()=>{
  item('plant',-11.1,1.25,.65,.65,0,1.6);
  // Central hall: intentionally more open for turning and dodging.
  item('bench',-.5,8.7,1.65,.55,0,.8);
- item('lamp',-2.5,8.6,.60,.60,0,2.35);
- item('lamp',10.45,7.2,.60,.60,0,2.35);
  item('plant',3.5,8.75,.65,.65,0,1.6);
  // Work room / bedroom on the east
  item('desk',9.5,8.7,2.15,.9,0,.88);
@@ -349,8 +345,7 @@ const CHASE=(()=>{
  const fixed=[...walls,...furniture];
  const TIP_KINDS=new Set(['chair','plant','officechair','nightstand','shelf','bookshelf','lowtable','shoe']);
  const TIP_VALUES={chair:26000,plant:12000,officechair:56000,nightstand:48000,shelf:78000,bookshelf:95000,lowtable:39000,shoe:35000};
- const BREAK_VALUES={door:72000,fusuma:44000,boxes:16000,cage:118000,partition:185000,wall:160000,outerwall:310000};
- const FURNITURE_VALUES={sofa:155000,coffee:32000,table:90000,kitchen:240000,island:135000,fridge:170000,television:280000,armchair:82000,desk:95000,bed:85000,plant:12000,chair:26000,officechair:56000,shelf:78000,shoe:35000,bench:28000,washing:110000,wash:55000,lowtable:39000,lamp:42000};
+ const BREAK_VALUES={door:72000,fusuma:44000,boxes:16000,cage:118000,partition:185000};
  const tipCandidates=furniture.map((f,i)=>({...f,index:i})).filter(f=>TIP_KINDS.has(f.kind));
  function inRect(x,z,b,pad=0){return Math.abs(x-b.x)<b.w/2+pad&&Math.abs(z-b.z)<b.d/2+pad}
  function overlap(x,z,y,r,h,b){if(y+.10>=b.y+b.h||y+h<=b.y+.03)return false;const qx=clamp(x,b.x-b.w/2,b.x+b.w/2),qz=clamp(z,b.z-b.d/2,b.z+b.d/2);return (x-qx)**2+(z-qz)**2<r*r-1e-7}
@@ -470,74 +465,18 @@ const CHASE=(()=>{
  }
  let sharedNav=null;
  class Game{
-  constructor(emit=()=>{}){
-    this.emit=emit;
-    // Mobile-friendly local recovery samples. No multi-second mesh build.
-    this.nav={nodes:[],components:[],path:()=>[],candidates:(a,limit=10)=>{
-      const candidates=[];
-      for(const rr of [.60,1.15,1.8,2.2])for(let k=0;k<16;k++){
-        const angle=k*Math.PI/8,x=a.x+Math.cos(angle)*rr,z=a.z+Math.sin(angle)*rr;
-        if(Math.abs(x)>=11.4||Math.abs(z)>=9.4)continue;
-        if(!this.colliderAt(x,z,0,.33,1.06))candidates.push({n:{x,z,y:0},score:rr});
-      }
-      return candidates.slice(0,limit);
-    }};
-    this.reset();
-  }
-  reset(){this.time=0;this.mode='ready';this.countdown=3.2;this.player={x:-1.55,z:4.1,y:0,yaw:Math.PI/2,energy:3.0,speed:0,velX:0,velZ:0};this.dog={x:-9.4,z:3.1,y:0,yaw:0,speed:0,velX:0,velZ:0};this.states=breakables.map(()=>({broken:false,open:0,timer:0}));this.wallBroken=new Uint8Array(walls.length);this.furnitureBroken=new Uint8Array(furniture.length);this.fallingT=0;this.destroyed=0;this.path=[];this.repath=0;this.bash=null;this.bashT=0;this.charge='normal';this.chargeT=0;this.nextCharge=12;this.dogDistance=10;this.recover=0;this.milestone=0;this.stuck=0;this.ran=false;this.lastGoal=null;this.recovery=null;this.recoveryAge=0;this.history=[];this.historyT=0;this.navStats={plans:0,failed:0,recoveries:0};
+  constructor(emit=()=>{}){this.emit=emit;this.nav=sharedNav||(sharedNav=new Navigation());this.reset()}
+  reset(){this.time=0;this.mode='ready';this.countdown=3.2;this.player={x:-1.55,z:4.1,y:0,yaw:Math.PI/2,energy:3.0,speed:0,velX:0,velZ:0};this.dog={x:-9.4,z:3.1,y:0,yaw:0,speed:0,velX:0,velZ:0};this.states=breakables.map(()=>({broken:false,open:0,timer:0}));this.destroyed=0;this.path=[];this.repath=0;this.bash=-1;this.bashT=0;this.charge='normal';this.chargeT=0;this.nextCharge=12;this.dogDistance=10;this.recover=0;this.milestone=0;this.stuck=0;this.ran=false;this.lastGoal=null;this.recovery=null;this.recoveryAge=0;this.history=[];this.historyT=0;this.navStats={plans:0,failed:0,recoveries:0};
    this.damageYen=0;this.fallen=new Set();this.dominoPending=[];this.nextDomino=21;this.dominoCount=0;
    this.boxHeadT=0;this.boxHeadSeen=false;this.brokenBoxes=0;this.rampages=0;this.chaosLevel=0;
    // Counter repetitive loops around the sofa/table, without teleporting the dog.
    this.orbits=[{x:-8,z:7.2,inner:1.4,outer:5.15,angle:null,turn:0,away:0,name:'ソファ'},
                 {x:.8,z:-6,inner:1.15,outer:4.1,angle:null,turn:0,away:0,name:'ダイニング'}];
    this.loopReads=0;this.shortcutT=0;this.nextLoopRead=8;
-   this.wallBreaches=0;this.bash=null;this.bashT=0;this.outerTarget=-1;this.outerUntil=0;this.nextOuterAct=15;
+   this.nextLeap=16;this.leapApproach=null;this.leap=null;this.leapLift=0;
+   this.sofaLeaps=0;this.wallBreaches=0;this.nextWallAct=19;
    this.roomba={active:false,x:-5.0,z:2.0,y:0,dx:1,dz:0.5,stunT:0,hits:0};this.snack={count:0,at:46,t:0,x:0,z:0};this.toy={active:false,x:0,z:0,y:0,t:0,next:62,count:0};}
 
-  // Static-looking house geometry is actually breakable, piece by piece.
-  fixedAt(x,z,y,r,h){
-    for(let i=0;i<walls.length;i++)if(!this.wallBroken[i]&&overlap(x,z,y,r,h,walls[i]))return {type:'wall',index:i};
-    for(let i=0;i<furniture.length;i++)if(!this.furnitureBroken[i]&&overlap(x,z,y,r,h,furniture[i]))return {type:'furniture',index:i};
-    return null;
-  }
-  colliderAt(x,z,y,r,h){
-    const fixed=this.fixedAt(x,z,y,r,h);if(fixed)return fixed;
-    const j=this.dynamicAt(x,z,y,r,h);
-    return j>=0?{type:'breakable',index:j}:null;
-  }
-  clearBetween(a,b,r=ACTOR_RADIUS){
-    const len=Math.hypot(a.x-b.x,a.z-b.z),n=Math.max(1,Math.ceil(len/.14));
-    for(let k=1;k<=n;k++){
-      const t=k/n,x=mix(a.x,b.x,t),z=mix(a.z,b.z,t);
-      if(this.colliderAt(x,z,0,r,1.0))return false;
-    }
-    return true;
-  }
-  objectOf(hit){
-    return hit.type==='wall'?walls[hit.index]:hit.type==='furniture'?furniture[hit.index]:breakables[hit.index];
-  }
-  breakObstacle(hit,by='dog'){
-    if(hit.type==='breakable'){this.break(hit.index,by);return;}
-    const b=this.objectOf(hit);
-    if(hit.type==='wall'){
-      if(this.wallBroken[hit.index])return;
-      this.wallBroken[hit.index]=1;
-      this.wallBreaches++;if(this.outerTarget===hit.index)this.outerTarget=-1;
-    }else{
-      if(this.furnitureBroken[hit.index])return;
-      this.furnitureBroken[hit.index]=1;
-    }
-    this.destroyed++;
-    this.damageYen+=(hit.type==='wall'?BREAK_VALUES[b.kind]:FURNITURE_VALUES[b.kind])||32000;
-    this.emit('smash',{object:b,target:hit,by,damageYen:this.damageYen});
-    this.repath=0;this.path=[];this.lastGoal=null;this.recovery=null;
-  }
-  finish(reason='caught'){
-    if(this.mode==='caught')return;
-    this.mode='caught';this.emit('caught',{reason,time:this.time,destroyed:this.destroyed,damageYen:this.damageYen,
-      dominoCount:this.dominoCount,rampages:this.rampages,roombaHits:this.roomba.hits,
-      snackBursts:this.snack.count,toys:this.toy.count,loopReads:this.loopReads});
-  }
   start(){this.reset();this.mode='countdown';this.emit('count',{n:3})}
   break(index,by){if(this.states[index].broken)return;this.states[index].broken=true;this.destroyed++;this.damageYen+=BREAK_VALUES[breakables[index].kind]||10000;
     if(by==='dog'&&breakables[index].kind==='partition'){
@@ -555,12 +494,9 @@ const CHASE=(()=>{
     this.emit('boxHead',{seconds:this.boxHeadT});return true;
   }
   tipFurniture(index,by='dog'){
-    const f=furniture[index];
-    if(!f||this.furnitureBroken[index])return false;
-    this.fallen.add(index);this.dominoCount++;
-    this.breakObstacle({type:'furniture',index},by);
-    this.emit('domino',{furniture:{...f,index},by,damageYen:this.damageYen});
-    return true;
+    const f=furniture[index];if(!f||!TIP_KINDS.has(f.kind)||this.fallen.has(index))return false;
+    this.fallen.add(index);this.destroyed++;this.damageYen+=TIP_VALUES[f.kind]||20000;
+    this.dominoCount++;this.emit('domino',{furniture:{...f,index},by,damageYen:this.damageYen});return true;
   }
   scheduleDomino(origin){
     const available=tipCandidates.filter(f=>f.floor===(this.dog.y>2?1:0)&&!this.fallen.has(f.index)&&!this.dominoPending.some(q=>q.index===f.index));
@@ -607,26 +543,66 @@ const CHASE=(()=>{
       o.angle=a;
     }
   }
-  // Camping next to the perimeter is risky: the dog may deliberately
-  // ram that wall, making a real fall hazard. No scripted wall vanishes by itself.
-  checkOuterPressure(){
-    if(this.outerTarget>=0){
-      if(this.wallBroken[this.outerTarget]||this.time>=this.outerUntil)this.outerTarget=-1;
+  // Intentionally target a reachable take-off point. Jumping is NOT a shortcut
+  // through collision: a visible, timed 3D arc crosses only the specified sofa.
+  considerSofaLeap(dt){
+    const p=this.player,d=this.dog,sofa=furniture.find(f=>f.kind==='sofa');
+    if(this.leapApproach){
+      this.leapApproach.ttl-=dt;
+      const a=this.leapApproach;
+      const sameSide=(p.z-sofa.z)*(a.start.z-sofa.z)>0;
+      if(a.ttl<=0||sameSide||Math.abs(p.x-sofa.x)>3.1){this.leapApproach=null;}
+      else if(Math.hypot(d.x-a.start.x,d.z-a.start.z)<.48){
+        this.leap={phase:'windup',t:0,from:{x:d.x,z:d.z},to:{...a.end}};
+        this.leapApproach=null;this.leapLift=0;this.nextLeap=this.time+22;
+        this.emit('sofaWindup',{x:sofa.x,z:sofa.z});
+        this.charge='normal';this.chargeT=0;this.nextCharge=this.time+7;
+      }
     }
-    if(this.outerTarget>=0||this.time<this.nextOuterAct)return;
-    const p=this.player,d=this.dog;
-    if(Math.hypot(p.x-d.x,p.z-d.z)>12)return;
-    let best=-1,bestDist=Infinity;
-    for(let i=0;i<walls.length;i++){
-      const b=walls[i];if(!b.outer||this.wallBroken[i])continue;
-      const dd=Math.hypot(p.x-b.x,p.z-b.z);
-      if(dd<bestDist){bestDist=dd;best=i;}
+    if(this.leap||this.leapApproach||this.time<this.nextLeap||this.boxHeadT>.1)return;
+    if(!(this.shortcutT>0||this.time>=24))return;
+    // Only when opposite sides of the sofa, not just when passing by.
+    if(Math.abs(p.x-sofa.x)>2.25||Math.abs(d.x-sofa.x)>3.8)return;
+    const sideP=Math.sign(p.z-sofa.z),sideD=Math.sign(d.z-sofa.z);
+    if(!sideP||!sideD||sideP===sideD)return;
+    if(Math.abs(p.z-sofa.z)<1.32||Math.abs(d.z-sofa.z)<1.22)return;
+    if(Math.abs(d.z-sofa.z)>5.5)return;
+    const start={x:sofa.x,z:sideD<0?5.55:8.68,y:0};
+    const end={x:sofa.x,z:sideD<0?8.67:5.55,y:0};
+    if(isBlocked(start.x,start.z,0,.36,1.1)||isBlocked(end.x,end.z,0,.36,1.1)||
+       this.dynamicAt(start.x,start.z,0,.36,1.1)>=0||this.dynamicAt(end.x,end.z,0,.36,1.1)>=0)return;
+    // The dog walks to the starting point along the navigation mesh.
+    this.leapApproach={start,end,ttl:5.5};
+    this.repath=0;this.lastGoal=null;
+  }
+  updateLeap(dt){
+    const L=this.leap;if(!L)return;
+    L.t+=dt;const d=this.dog;
+    if(L.phase==='windup'){
+      d.speed=0;d.velX=d.velZ=0;
+      d.yaw=Math.atan2(L.to.x-d.x,L.to.z-d.z);
+      if(L.t>=.74){L.phase='flight';L.t=0;
+        this.emit('sofaTakeoff',{x:d.x,z:d.z,sofa:{x:-8,z:7.2,w:4.1,d:1.6,h:1.15}});
+      }
+    }else if(L.phase==='flight'){
+      const u=clamp(L.t/1.05,0,1);
+      const eased=u*u*(3-2*u);
+      const ox=d.x,oz=d.z;
+      d.x=L.from.x+(L.to.x-L.from.x)*eased;
+      d.z=L.from.z+(L.to.z-L.from.z)*eased;
+      d.yaw=Math.atan2(L.to.x-L.from.x,L.to.z-L.from.z);
+      this.leapLift=Math.sin(Math.PI*u)*2.05;
+      d.velX=(d.x-ox)/dt;d.velZ=(d.z-oz)/dt;d.speed=Math.hypot(d.velX,d.velZ);
+      if(u>=1){this.leapLift=0;L.phase='land';L.t=0;
+        this.sofaLeaps++;this.emit('sofaLand',{x:d.x,z:d.z,count:this.sofaLeaps});
+      }
+    }else if(L.phase==='land'){
+      d.speed=0;d.velX=d.velZ=0;
+      if(L.t>=.45){this.leap=null;this.leapLift=0;
+        this.charge='pant';this.chargeT=.8;this.repath=0;this.lastGoal=null;
+      }
     }
-    if(best<0||bestDist>2.65)return;
-    this.outerTarget=best;this.outerUntil=this.time+10;
-    this.nextOuterAct=this.time+17;
-    this.recovery=null;this.stuck=0;
-    this.emit('outerPlan',{object:walls[best]});
+    this.dogDistance=Math.hypot(this.player.x-d.x,this.player.z-d.z);
   }
   // All chaos events are visual and readable; player running speed never changes.
   updateRoomba(dt){
@@ -683,78 +659,45 @@ const CHASE=(()=>{
     if(level!==this.chaosLevel){this.chaosLevel=level;this.emit('chaos',{level});}
   }
   dynamicAt(x,z,y,r,h){for(let i=0;i<breakables.length;i++){const s=this.states[i];if(s.broken||s.open>.72)continue;if(overlap(x,z,y,r,h,breakables[i]))return i}return-1}
-  move(a,dx,dz,isDog,sprinting,dt){
-    let blocked=null;
-    const r=ACTOR_RADIUS,h=isDog?1.06:1.66,n=Math.max(1,Math.ceil(Math.hypot(dx,dz)/.12));
-    const ox=a.x,oz=a.z;
-    for(let k=0;k<n;k++)for(const axis of ['x','z']){
-      const xx=a.x+(axis==='x'?dx/n:0),zz=a.z+(axis==='z'?dz/n:0),yy=0;
-      const hit=this.colliderAt(xx,zz,yy,r,h);
-      if(hit){
-        if(!isDog&&hit.type==='breakable'){
-          const b=breakables[hit.index];
-          if(['door','fusuma'].includes(b.kind))this.states[hit.index].timer=1.15;
-          else if(['boxes','cage'].includes(b.kind)){this.break(hit.index,'player');this.emit('bump',{});}
-        }
-        if(!isDog || !blocked)blocked=hit;
-        continue;
-      }
-      // Nothing outside the platform supports the player: crossing a broken
-      // exterior wall leads to a visible fall, not an invisible barrier.
-      a.x=xx;a.z=zz;a.y=yy;
-    }
-    a.velX=(a.x-ox)/Math.max(dt,.001);a.velZ=(a.z-oz)/Math.max(dt,.001);
-    a.speed=Math.hypot(a.velX,a.velZ);
-    return blocked;
+  move(a,dx,dz,isDog,sprinting,dt){let blocked=-1;const r=ACTOR_RADIUS,h=isDog?1.06:1.66,n=Math.max(1,Math.ceil(Math.hypot(dx,dz)/.12));const ox=a.x,oz=a.z;for(let k=0;k<n;k++){for(const axis of ['x','z']){let xx=a.x+(axis==='x'?dx/n:0),zz=a.z+(axis==='z'?dz/n:0),yy=support(xx,zz,a.y);if(yy===null||isBlocked(xx,zz,yy,r,h))continue;let j=this.dynamicAt(xx,zz,yy,r,h);if(j>=0){const b=breakables[j];if(!isDog&&['door','fusuma'].includes(b.kind)){this.states[j].timer=1.15;}else if(!isDog&&['boxes','cage'].includes(b.kind)){this.break(j,'player');this.emit('bump',{});}else{blocked=j;continue}}
+    if(j<0||this.states[j].broken||this.states[j].open>.72){a.x=xx;a.z=zz;a.y=yy;}}}
+   a.velX=(a.x-ox)/Math.max(dt,.001);a.velZ=(a.z-oz)/Math.max(dt,.001);a.speed=Math.hypot(a.velX,a.velZ);return blocked;
   }
-  tick(dt,input={x:0,z:0,sprint:false}){if(this.mode==='caught'||this.mode==='ready')return;
-   if(this.mode==='falling'){
-     this.time+=dt;this.fallingT+=dt;
-     this.player.y=-.45-7.8*this.fallingT*this.fallingT;
-     this.player.speed=0;this.dog.speed=0;
-     if(this.fallingT>=1.0)this.finish('fall');
-     return;
-   }
-   if(this.mode==='countdown'){const prev=Math.ceil(this.countdown);this.countdown-=dt;const now=Math.ceil(this.countdown);if(now!==prev&&now>0)this.emit('count',{n:now});if(this.countdown<=0){this.mode='play';this.emit('go',{});}return}
+  tick(dt,input={x:0,z:0,sprint:false}){if(this.mode==='caught'||this.mode==='ready')return;if(this.mode==='countdown'){const prev=Math.ceil(this.countdown);this.countdown-=dt;const now=Math.ceil(this.countdown);if(now!==prev&&now>0)this.emit('count',{n:now});if(this.countdown<=0){this.mode='play';this.emit('go',{});}return}
    dt=Math.min(dt,.05);this.time+=dt;const p=this.player,d=this.dog;this.processChaos(dt);
    this.shortcutT=Math.max(0,this.shortcutT-dt);
    for(let i=0;i<this.states.length;i++){let s=this.states[i],b=breakables[i];if(s.broken||!['door','fusuma'].includes(b.kind))continue;if(Math.abs(p.y-b.y)<.65&&dist(p,b)<1.62)s.timer=1.1;s.timer=Math.max(0,s.timer-dt);const target=s.timer>0?1:0;s.open+=(target-s.open)*(1-Math.exp(-11*dt));}
    const len=Math.hypot(input.x||0,input.z||0),moving=len>.08;
    const speed=5.30; // One constant speed in every direction; no dash threshold or stamina.
    if(moving){const x=input.x/len,z=input.z/len;p.yaw=Math.atan2(x,z);this.move(p,x*speed*dt,z*speed*dt,false,false,dt);this.ran=true;}else{p.speed=0;p.velX=p.velZ=0;}
-   if(Math.abs(p.x)>=11.98||Math.abs(p.z)>=9.98){
-     this.mode='falling';this.fallingT=0;this.emit('fallStart',{x:p.x,z:p.z});return;
-   }
    this.dogDistance=Math.hypot(p.x-d.x,p.z-d.z,(p.y-d.y)*2.5);
-   this.trackCircling(dt);this.checkOuterPressure();
-   if(this.charge==='normal'&&this.time>=this.nextCharge&&this.dogDistance<12&&Math.abs(p.y-d.y)<.5&&this.clearBetween(d,p,.29)){this.charge='warning';this.chargeT=this.time>20?1.02:.75;this.emit('charge',{rampage:this.time>=20});if(this.time>=20)this.rampages++;}
+   this.trackCircling(dt);
+   this.considerSofaLeap(dt);
+   // A leap has a telegraphed windup, visible arc, and recovery. The player
+   // can still move during all three stages, and cannot be caught in midair.
+   if(this.leap){
+     this.updateLeap(dt);
+     const m=Math.floor(this.time/15);if(m>this.milestone){this.milestone=m;this.emit('milestone',{seconds:m*15})}
+     return;
+   }
+   if(this.charge==='normal'&&this.time>=this.nextCharge&&this.dogDistance<12&&Math.abs(p.y-d.y)<.5&&lineClear(d,p,.35,true,this.states)){this.charge='warning';this.chargeT=this.time>20?1.02:.75;this.emit('charge',{rampage:this.time>=20});if(this.time>=20)this.rampages++;}
    if(this.charge==='warning'){this.chargeT-=dt;if(this.chargeT<=0){this.charge='dash';this.chargeT=this.time>=20?1.28:.95;}}
    else if(this.charge==='dash'){this.chargeT-=dt;if(this.chargeT<=0){this.charge='pant';this.chargeT=1.15;this.emit('pant',{});}}
    else if(this.charge==='pant'){this.chargeT-=dt;if(this.chargeT<=0){this.charge='normal';this.nextCharge=this.time+(this.time>20?7.9:8.5);}}
-   if(this.bash){
-     this.bashT-=dt;d.speed=0;d.velX=d.velZ=0;
-     // Broken by a concurrent chain reaction? Disarm cleanly.
-     const hit=this.bash.target;
-     const gone=hit.type==='wall'?this.wallBroken[hit.index]:hit.type==='furniture'?this.furnitureBroken[hit.index]:this.states[hit.index].broken;
-     if(gone){this.bash=null;this.repath=0;}
-     else if(this.bashT<=0){
-       this.breakObstacle(hit,'dog');
-       this.bash=null;this.charge='normal';this.chargeT=0;
-       this.nextCharge=this.time+4.5;
-     }
-   }
+   if(this.bash>=0){this.bashT-=dt;d.speed=0;if(this.states[this.bash].broken||this.states[this.bash].open>.8){this.bash=-1;this.repath=0;}else if(this.bashT<=0){this.break(this.bash,'dog');this.bash=-1;this.charge='pant';this.chargeT=.48;}}
    else if(this.time>1.15){
     let target=null;
-    // The dog aims ahead during repetitive player loops.
+    // The dog intentionally heads to a sofa take-off point when appropriate.
     // While a repetitive orbit is detected, aim slightly ahead of the player.
     let predicted=p;
     if(this.shortcutT>0&&!this.toy.active&&p.speed>.6){
       const lead=.48,tx=p.x+p.velX*lead,tz=p.z+p.velZ*lead;
-      if(!this.colliderAt(tx,tz,0,ACTOR_RADIUS,1.12)&&this.clearBetween(p,{x:tx,z:tz,y:0},ACTOR_RADIUS-.002)){
+      if(!isBlocked(tx,tz,p.y,ACTOR_RADIUS,1.12)&&this.dynamicAt(tx,tz,p.y,ACTOR_RADIUS,1.12)<0&&walkClear(p,{x:tx,z:tz,y:p.y},ACTOR_RADIUS-.002)){
         predicted={x:tx,z:tz,y:p.y};
       }
     }
-    const goal=this.outerTarget>=0?walls[this.outerTarget]:this.toy.active?this.toy:predicted;
+    const goal=this.leapApproach?.start||(this.toy.active?this.toy:predicted);
+    const direct=walkClear(d,goal,ACTOR_RADIUS-.0005);
     this.repath-=dt;
     const changed=!this.lastGoal||Math.hypot(goal.x-this.lastGoal.x,goal.z-this.lastGoal.z,goal.y-this.lastGoal.y)>.55;
     if(this.recovery){
@@ -764,10 +707,22 @@ const CHASE=(()=>{
      if(Math.hypot(d.x-this.recovery.x,d.z-this.recovery.z)<.13){this.recovery=null;this.repath=0;this.lastGoal=null;}
      else target=this.recovery;
     }
-    // Golden's new rule: barriers are not a detour. He runs straight at
-    // the target; the first obstacle he TOUCHES is smashed after 0.5 s.
-    // Deliberately retain navigation as a fallback for the toy diversion.
-    if(!target){target=goal;this.path=[];} // smash the obstruction, never orbit indefinitely
+    if(!target&&direct){target=goal;this.path=[];}
+    else if(!target){
+     if(this.repath<=0&&(changed||!this.path.length||this.stuck>.32)){
+      const oppositeWall=(d.z+.35)*(p.z+.35)<0;
+      const wantsBreach=this.time>=19&&(this.shortcutT>0||(this.time>=30&&oppositeWall));
+      this.path=this.nav.path(d,goal,this.states,{breach:wantsBreach});this.navStats.plans++;
+      if(!this.path.length)this.navStats.failed++;
+      this.lastGoal={x:goal.x,z:goal.z,y:goal.y};this.repath=this.shortcutT>0?.26:.55;
+     }
+     while(this.path.length&&Math.hypot(this.path[0].x-d.x,this.path[0].z-d.z)<.12&&Math.abs(this.path[0].y-d.y)<.13)this.path.shift();
+     // Only remove corners if the full swept corridor, including stair support, is safe.
+     for(let j=Math.min(7,this.path.length-1);j>0;j--){
+      if(walkClear(d,this.path[j],ACTOR_RADIUS+.002)){this.path.splice(0,j);break}
+     }
+     target=this.path[0]||null;
+    }
     let sp=this.time<5?2.8:4.06+Math.min(1.38,Math.max(0,this.time-12)*.019);
     if(this.charge==='warning')sp*=.42;
     if(this.charge==='dash')sp+=this.time>20?1.70:1.55;
@@ -779,11 +734,12 @@ const CHASE=(()=>{
      if(L>.008){
       d.yaw=Math.atan2(dx,dz);const step=Math.min(L,sp*dt);
       const blocked=this.move(d,dx/L*step,dz/L*step,true,false,dt);
-      if(blocked){
-        this.bash={target:blocked,point:{x:d.x,z:d.z}};
-        this.bashT=.5;
-        const obstacle=this.objectOf(blocked);
-        this.emit('bash',{object:obstacle,target:blocked,seconds:.5});this.stuck=0;
+      if(blocked>=0){
+        this.bash=blocked;
+        const kind=breakables[blocked].kind;
+        this.bashT=kind==='partition'?1.03:kind==='cage'?.8:kind==='boxes'?.5:.64;
+        if(kind==='partition')this.emit('wallWarning',{object:breakables[blocked]});
+        this.emit('bash',{object:breakables[blocked]});this.stuck=0;
       }
       else if(d.speed<.09)this.stuck+=dt;else this.stuck=Math.max(0,this.stuck-dt*2);
      }else this.stuck+=dt;
@@ -802,19 +758,16 @@ const CHASE=(()=>{
     }
    }
    this.dogDistance=Math.hypot(p.x-d.x,p.z-d.z,(p.y-d.y)*2.5);
-   if(this.time>3.5&&this.boxHeadT<.15&&this.dogDistance<1.02&&Math.abs(p.y-d.y)<.65&&this.clearBetween(d,p,.14))this.finish('caught');
+   if(this.time>3.5&&!this.leap&&this.boxHeadT<.15&&this.dogDistance<1.02&&Math.abs(p.y-d.y)<.65&&lineClear(d,p,.14,true,this.states)){this.mode='caught';this.emit('caught',{time:this.time,destroyed:this.destroyed,damageYen:this.damageYen,dominoCount:this.dominoCount,rampages:this.rampages,roombaHits:this.roomba.hits,snackBursts:this.snack.count,toys:this.toy.count,wallBreaches:this.wallBreaches,sofaLeaps:this.sofaLeaps,loopReads:this.loopReads});}
    const m=Math.floor(this.time/15);if(m>this.milestone){this.milestone=m;this.emit('milestone',{seconds:m*15});}
   }
-  snapshot(){return{mode:this.mode,time:this.time,player:{...this.player},dog:{...this.dog},destroyed:this.destroyed,charge:this.charge,
-    stock:this.states.map(s=>({...s})),wallBroken:[...this.wallBroken],furnitureBroken:[...this.furnitureBroken],
-    bash:this.bash?{...this.bash,target:{...this.bash.target}}:null,bashTime:this.bashT,fallingT:this.fallingT,
-    navStats:{...this.navStats},damageYen:this.damageYen,dominoCount:this.dominoCount,
-    boxHeadT:this.boxHeadT,rampages:this.rampages,chaosLevel:this.chaosLevel,
-    roomba:{...this.roomba},snack:{...this.snack},toy:{...this.toy},fallen:[...this.fallen],
-    loopReads:this.loopReads,shortcutT:this.shortcutT};}
+  snapshot(){return{mode:this.mode,time:this.time,player:{...this.player},dog:{...this.dog},destroyed:this.destroyed,charge:this.charge,stock:this.states.map(s=>({...s})),pathLength:this.path.length,stuck:this.stuck,navStats:{...this.navStats},recovering:!!this.recovery,damageYen:this.damageYen,dominoCount:this.dominoCount,boxHeadT:this.boxHeadT,rampages:this.rampages,chaosLevel:this.chaosLevel,roomba:{...this.roomba},snack:{...this.snack},toy:{...this.toy},fallen:[...this.fallen],
+    wallBreaches:this.wallBreaches,sofaLeaps:this.sofaLeaps,loopReads:this.loopReads,
+    shortcutT:this.shortcutT,leapPhase:this.leap?.phase||null,
+    leapLift:this.leapLift,approachingSofa:!!this.leapApproach};}
  }
  const room=(x,z,y)=>{if(z<-.35){if(x<-3.1)return'キッチン';if(x>7.05)return'洗面室';return'ダイニング';}if(x<4.45)return x< -3?'リビング':'広い廊下';return z>5.75?'書斎':'ペットスペース';};
- return{Game,Navigation,walls,furniture,breakables,tipCandidates,TIP_VALUES,BREAK_VALUES,FURNITURE_VALUES,fixed,FLOOR,STEP,rampAt,rampY,support,isBlocked,lineClear,walkClear,overlap,room,clamp,dist,ACTOR_RADIUS};
+ return{Game,Navigation,walls,furniture,breakables,tipCandidates,TIP_VALUES,BREAK_VALUES,fixed,FLOOR,STEP,rampAt,rampY,support,isBlocked,lineClear,walkClear,overlap,room,clamp,dist,ACTOR_RADIUS};
 })();
 if(typeof module!=='undefined'&&module.exports)module.exports=CHASE;
 
@@ -969,12 +922,7 @@ const ART=(()=>{
  const cy=(b,p,s,c,r=[0,0,0],top=1)=>shape(b,cylinder(top),p,s,c,r);
  function furniture(desc){const b=new Batch(),w=desc.w,d=desc.d,k=desc.kind;
   const legs=(y=.42)=>{for(let x of [-w*.4,w*.4])for(let z of [-d*.36,d*.36])rb(b,[x,y/2,z],[.10,y,.10],darkwood)};
-  if(k==='lamp'){
-    cy(b,[0,.055,0],[.28,.10,.28],darkwood);
-    cy(b,[0,1.02,0],[.027,2,.027],darkwood);
-    cy(b,[0,1.92,0],[.39,.47,.39],'#f4dfac',[0,0,0],.67);
-  }
-  else if(k==='sofa'||k==='armchair'){
+  if(k==='sofa'||k==='armchair'){
    const c=k==='sofa'?mint:'#d3a66e';legs(.18);rb(b,[0,.50,0],[w,.65,d*.83],c);rb(b,[0,.85,d*.36],[w,.70,d*.22],c);for(let x of [-w/2+.20,w/2-.20])rb(b,[x,.77,0],[.37,.63,d],c);let n=k==='sofa'?3:1;for(let i=0;i<n;i++){let x=(i-(n-1)/2)*(w-.8)/n;rb(b,[x,.80,-d*.11],[(w-.9)/n-.035,.20,d*.59],'#95b39b');rb(b,[x,1.03,d*.22],[(w-.9)/n-.05,.40,.22],c,[-.13,0,0]);}if(k==='sofa'){rb(b,[-w*.27,1.0,-.19],[.55,.5,.21],'#eec974',[.1,.12,-.20]);rb(b,[w*.28,1.,-.08],[.48,.43,.23],'#f1e3c9',[.05,-.2,.18]);}}
   else if(['coffee','table','lowtable','desk','bench'].includes(k)){
    const h=desc.h;legs(h-.12);rb(b,[0,h-.09,0],[w,.18,d],k==='lowtable'?'#a7754a':wood);if(k==='desk'){rb(b,[0,h+.42,d*.2],[1.0,.66,.07],'#27433e');rb(b,[0,h+.42,d*.2-.045],[.9,.53,.018],'#9cc7bb');bx(b,[0,h+.05,-.16],[.64,.035,.22],'#edead9');cy(b,[w*.35,h+.16,-.10],[.10,.23,.10],'#d8be7b');}
@@ -1006,38 +954,24 @@ const ART=(()=>{
   const addWorld=(b,type,p,s,c,r=[0,0,0],kind=0)=>shape(b,type,p,s,c,r,kind);
   await progress(35,'平屋の床と壁を準備しています。');
   // Floorboards, tatami, rugs, stairs and ceilings.
-  // Avoid z-fighting: the structural slab's top is y=-0.05; the visible wood surface sits above it.
-  bx(batches[0],[0,-.39,0],[24,.68,20],'#967451');
-  bx(batches[0],[0,-.028,0],[23.96,.055,19.96],'#d1b084',[0,0,0],1);
-  // The wood floor ENDS at the outside wall. Falling off is visible.
+  bx(batches[0],[0,-.16,0],[26,.28,22],'#a0b389');bx(batches[0],[0,-.06,0],[24,.14,20],'#d1b084',[0,0,0],1);
   // Roof omitted: third-person cutaway must never become a ceiling camera.
   // Roof omitted: third-person cutaway must never become a ceiling camera.
 
-  // Individually render every destructible segment; intact pieces can never
-  // remain visible when their corresponding collision has disappeared.
-  const wallPieces=[];
-  for(let wi=0;wi<CHASE.walls.length;wi++){
-    const w=CHASE.walls[wi],b=new Batch(),outer=!!w.outer,h=w.h;
-    const horizontal=w.w>w.d,span=horizontal?w.w:w.d;
-    const patch=(pos,size,color)=>rb(b,horizontal?[pos[0],pos[1],pos[2]]:[pos[2],pos[1],pos[0]],
-      horizontal?[size[0],size[1],size[2]]:[size[2],size[1],size[0]],color);
-    if(outer&&span>1.15){
-      const t=horizontal?w.d:w.w;
-      // Solid lower rail and lintel; open window between them.
-      patch([0,.39,0],[span,.78,t],'#eee6d2');
-      patch([0,3.27,0],[span,.66,t],'#ede2d1');
-      for(const side of [-1,1])patch([side*span*.445,1.87,0],[span*.12,2.16,t],'#eee6d2');
-      patch([0,.84,0],[span,.08,t+.10],'#b78c62');
-      patch([0,2.98,0],[span,.10,t+.10],'#b78c62');
-      patch([0,1.89,0],[.066,2.20,t+.08],'#c6a177');
-      for(const side of [-1,1])patch([side*span*.29,1.82,0],[.065,2.08,t+.09],'#e9ddc8');
-      patch([0,1.85,0],[span*.86,.07,t+.095],'#b78c62');
-    }else{
-      rb(b,[0,h/2,0],[w.w,h,w.d],h<1.2?'#b99870':'#f1e5cf');
-      if(h>1.2)rb(b,[0,.09,0],[w.w+.02,.18,w.d+.02],'#b99870');
-    }
-    wallPieces.push({mesh:renderer.mesh(b),m:trans(w.x,w.y,w.z),index:wi,desc:w,wall:true,floor:0,cast:false});
+  for(const w of CHASE.walls){if(Math.abs(w.x)>=11.98||Math.abs(w.z)>=9.98)continue;bx(wallbatches[w.floor],[w.x,w.y+w.h/2,w.z],[w.w,w.h,w.d],w.h<1.2?wood:cream);if(w.h>1.3){bx(wallbatches[w.floor],[w.x,w.y+.075,w.z],[w.w+.025,.15,w.d+.025],wood);}}
+  function outsideWall(f,axis,loc){const base=f*3.6;
+   const long=axis==='x'?20:24;const n=axis==='x'?4:5,segment=long/n;
+   for(let i=0;i<n;i++){const mid=-long/2+segment*(i+.5),win=segment*.63;const p=(along,y)=>axis==='x'?[loc,base+y,along]:[along,base+y,loc];const s=(a,y,d)=>axis==='x'?[d,y,a]:[a,y,d];
+    bx(wallbatches[f],p(mid,.42),s(segment,.84,.22),cream);bx(wallbatches[f],p(mid,3.26),s(segment,.68,.22),cream);
+    for(const k of [-1,1]){bx(wallbatches[f],p(mid+k*(segment+win)/4,1.85),s((segment-win)/2,2.02,.22),cream);bx(wallbatches[f],p(mid+k*win/2,1.88),s(.075,2.12,.31),wood);}
+    for(let y of [.87,2.93])bx(wallbatches[f],p(mid,y),s(win+.14,.07,.31),wood);bx(wallbatches[f],p(mid,1.88),s(.048,2.1,.20),'#f0e6c8');
+    // Airy curtains as folded fabric at the sides of the window, leaving the view clear.
+    for(const side of [-1,1])for(let k=0;k<3;k++){const along=mid+side*(win*.40+k*.07);let pos=p(along,1.93);if(axis==='x')pos[0]+=loc>0?-.21:.21;else pos[2]+=loc>0?-.21:.21;rb(wallbatches[f],pos,s(.17,1.96,.16),'#dfe4d3');}
+   }
   }
+  for(let f=0;f<1;f++){outsideWall(f,'x',-12);outsideWall(f,'x',12);outsideWall(f,'z',-10);outsideWall(f,'z',10);}
+  // Fixed entrance: the only door the dog cannot break.
+  rb(wallbatches[0],[4.35,1.42,9.86],[2.0,2.84,.18],'#758875');bx(wallbatches[0],[4.35,2.0,9.745],[1.24,.84,.025],'#cad7c4');cy(wallbatches[0],[3.69,1.36,9.69],[.045,.33,.045],'#d6b673');
   await progress(48,'家具を配置しています。');
   // Soft contact shadows and rugs.
   rb(batches[0],[-6.1,.026,4.5],[6.3,.034,4.0],'#c9c8a8');for(let x of [-8.8,-3.4])bx(batches[0],[x,.047,4.5],[.05,.012,3.55],'#b2b395');
@@ -1054,23 +988,22 @@ const ART=(()=>{
   const roombaMesh=renderer.mesh(botGeo),toyMesh=renderer.mesh(toyGeo),snackMesh=renderer.mesh(snackGeo);
   const mobileFurniture=[];
   for(let fi=0;fi<CHASE.furniture.length;fi++){
-    const f=CHASE.furniture[fi],local=furniture(f);
-    mobileFurniture.push({mesh:renderer.mesh(local),index:fi,floor:0,desc:f});
-    shape(shadows[0],disk(),[f.x,f.y+.018,f.z],[f.w*.7,1,f.d*.7],'#4e4832',[0,0,0],3);
+    const f=CHASE.furniture[fi],local=furniture(f),transform=trs([f.x,f.y,f.z],[0,f.rot,0],[1,1,1]);
+    if(CHASE.tipCandidates.some(q=>q.index===fi)){
+      mobileFurniture.push({mesh:renderer.mesh(local),index:fi,floor:f.floor,desc:f});
+    } else {
+      const geom=local.a;for(let i=0;i<geom.length;i+=12){const p=G3.transform(transform,geom.slice(i,i+3)),n=G3.norm(G3.transform(transform,geom.slice(i+3,i+6),0));furn[f.floor].a.push(...p,...n,...geom.slice(i+6,i+12));}
+    }
+    shape(shadows[f.floor],disk(),[f.x,f.y+.018,f.z],[f.w*.7,1,f.d*.7],'#4e4832',[0,0,0],3);
   }
   await progress(60,'照明と窓を準備しています。');
   // Warm floor lamps, ceiling lamps and family pictures.
-  // Floor lamps are individual destructible furniture pieces.
+  for(const [x,z,f]of [[-2.5,8.6,0],[10.45,7.2,0]]){const b=furn[f],y=f*3.6;cy(b,[x,y+.05,z],[.28,.10,.28],darkwood);cy(b,[x,y+1.02,z],[.025,2,.025],darkwood);cy(b,[x,y+1.92,z],[.39,.47,.39],'#f4dfac',[0,0,0],.67);}
   for(const [x,z,f]of [[-6,4,0],[-2.4,-5.6,0],[9.5,7.0,0]]){const b=batches[f],y=f*3.6;cy(b,[x,y+3.13,z],[.018,.8,.018],darkwood);cy(b,[x,y+2.81,z],[.4,.25,.4],'#e1c99b',[0,0,0],.5);cy(b,[x,y+2.68,z],[.33,.02,.33],'#fff0b5');}
-  // Exterior abyss, twelve units BELOW the suspended house. The platform
-  // really ends behind the wall, matching the fall collider.
-  const ext=new Batch();bx(ext,[0,-13.5,0],[88,.15,88],'#91a9a7');
-  for(let i=0;i<14;i++){const a=i*TAU/14,x=Math.sin(a)*(19+i%4),z=Math.cos(a)*(19+i%4);
-    cy(ext,[x,-12.6,z],[.17,1.8,.17],'#7e836e');
-    sp(ext,[x,-11.55,z],[1.2,1.1,1.2],i%2?'#9aab8e':'#b0bca3');
-  }
+  // Exterior garden is intentionally simple; it is visible through the real windows.
+  const ext=new Batch();bx(ext,[0,-.25,0],[85,.10,85],'#b6c5a0');for(let i=0;i<16;i++){const a=i*TAU/16,x=Math.sin(a)*(17+i%3),z=Math.cos(a)*(17+i%3);cy(ext,[x,1,z],[.23,2.3,.23],'#927557');sp(ext,[x,2.8,z],[1.65,1.9,1.6],i%2?'#8fab81':'#a4ba8c');}bx(ext,[0,-.17,14],[4,.09,8],'#d0c6b0');
   items.push({mesh:renderer.mesh(ext),m:id(),cast:false});
-  for(let f=0;f<1;f++){items.push({mesh:renderer.mesh(batches[f]),m:id(),cast:false,floor:f,structure:true});items.push({mesh:renderer.mesh(furn[f]),m:id(),cast:true,floor:f});}
+  for(let f=0;f<1;f++){items.push({mesh:renderer.mesh(batches[f]),m:id(),cast:false,floor:f,structure:true});items.push({mesh:renderer.mesh(wallbatches[f]),m:id(),cast:false,floor:f,wall:true});items.push({mesh:renderer.mesh(furn[f]),m:id(),cast:true,floor:f});}
   const quad=[-.5,-.5,0,0,0,1,0,0,.5,-.5,0,0,0,1,1,0,.5,.5,0,0,0,1,1,1,-.5,-.5,0,0,0,1,0,0,.5,.5,0,0,0,1,1,1,-.5,.5,0,0,0,1,0,1];
   function textPlane(txt,p,s,angle=0,bg='#f4ead7',fg='#425f52'){const c=document.createElement('canvas');c.width=512;c.height=256;const g=c.getContext('2d');g.fillStyle=bg;g.fillRect(0,0,512,256);g.fillStyle=fg;g.textAlign='center';g.textBaseline='middle';g.font='800 47px sans-serif';g.fillText(txt,256,128,460);const b=new Batch();b.add(quad,trs(p,[0,angle,0],s),'#ffffff',4);texItems.push({mesh:renderer.mesh(b),m:id(),texture:renderer.texture(c),cast:false,double:true,floor:p[1]>3.4?1:0});}
   textPlane('きょうも ごはん。',[-.05,2.1,-9.85],[1.8,.9,1]);textPlane('おかえり',[4.35,1.9,9.72],[1.13,.35,1],Math.PI,'#cad7c4','#3d6755');textPlane('いい日。',[4.25,2.25,7.65],[1.2,.9,1],-Math.PI/2,'#e5c997','#53745b');textPlane('おしごと中',[4.56,2.34,3.1],[.70,.34,1],Math.PI/2);
@@ -1105,7 +1038,6 @@ const ART=(()=>{
   });
   await progress(85,'ゴールデンを呼んでいます。');
   const generic=(g,c,kind=0)=>{const b=new Batch();b.add(g,id(),c,kind);return renderer.mesh(b)};
-  const hazardMesh=generic(box(.02),'#e89356');
   const debrisMesh=generic(box(0),'#ffffff');const shadow=generic(disk(),'#584936',3);
   const helmet=new Batch();
   // Four cardboard walls and a lid: a hollow, oversized, deliberately ridiculous hat.
@@ -1115,7 +1047,7 @@ const ART=(()=>{
   rb(helmet,[0,.38,.37],[.82,.75,.055],'#b9864f');
   rb(helmet,[0,.77,0],[.86,.06,.8],'#ebc48b');
   rb(helmet,[0,.80,0],[.10,.012,.8],'#fff0cf');
-  return {items,wallPieces,hazardMesh,breaks,mobileFurniture,roombaMesh,toyMesh,snackMesh,helmet:renderer.mesh(helmet),texItems,shadow,debrisMesh,contacts:shadows.map((b,f)=>({mesh:renderer.mesh(b),m:id(),alpha:.11,cast:false,double:true,floor:f})),dog:dog(renderer),player:player(renderer),food:food(renderer),generic};
+  return {items,breaks,mobileFurniture,roombaMesh,toyMesh,snackMesh,helmet:renderer.mesh(helmet),texItems,shadow,debrisMesh,contacts:shadows.map((b,f)=>({mesh:renderer.mesh(b),m:id(),alpha:.11,cast:false,double:true,floor:f})),dog:dog(renderer),player:player(renderer),food:food(renderer),generic};
  }
  const TAU=Math.PI*2;
  function dog(renderer){return PIXEL.dog(renderer);}
@@ -1171,11 +1103,11 @@ class ChaseAudio{
 
 </script>
 <script>
-/* Gohan Mada! v1.7.1 -- destructible one-floor house by ASOBEAT. */
+/* Gohan Mada! v1.0.0 -- original WebGL2 dog chase by ASOBEAT. */
 'use strict';
 (()=>{
  const $=id=>document.getElementById(id),show=(id,on)=>{$(id).hidden=!on},txt=(id,v)=>{$(id).textContent=String(v)},clamp=CHASE.clamp;
- const VERSION='1.7.1',STORE='asobeat_gohan_mada_pixel_v17',TAU=Math.PI*2;
+ const VERSION='1.6.0',STORE='asobeat_gohan_mada_pixel_v16',TAU=Math.PI*2;
  const testMode=new URLSearchParams(location.search).get('test')==='1';
  const data={best:0,view:'third',sound:false,reduced:window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)').matches:false,quality:'auto'};
  try{const d=JSON.parse(localStorage.getItem(STORE)||'null');const old=JSON.parse(localStorage.getItem('asobeat_gohan_mada_v1')||'null');if(!d&&old){data.sound=!!old.sound;data.reduced=!!old.reduced;}if(d){if(Number.isFinite(d.best)&&d.best>=0)data.best=d.best;for(const k of ['sound','reduced'])if(typeof d[k]==='boolean')data[k]=d[k];if(['high','low','auto'].includes(d.quality))data.quality=d.quality;}}catch(_){}
@@ -1228,31 +1160,22 @@ class ChaseAudio{
     if(!data.reduced)shakeT=.49;
     hudT=0;
   }
-  if(name==='bash'){
-    const b=payload.object;
-    warningT=.62;
-    txt('warning',b.kind==='outerwall'?'外壁を壊す！ 穴に近づくな！':'ゴールデン、0.5秒後に突撃！');
-    $('warning').className='warning';show('warning',true);
-    sound.bark();sound.tone(240,.32,.045,'sawtooth',120);
+  if(name==='sofaWindup'){
+    showChaos('ソファを飛ぶ気だ！！','sofa',1.1);
+    warningT=1.12;txt('warning','ワン！ 大ジャンプ準備中！');show('warning',true);
+    sound.bark();sound.tone(340,.3,.055,'triangle',840);
   }
-  if(name==='smash'){
-    const b=payload.object;stats.collisions++;destroyedNames.push(b.label||b.kind);
-    spawnDebris(b,'dog');sound.crash(b.kind);sound.tone(120,.22,.085,'sawtooth',48);
-    boomT=.85;shakeT=data.reduced?0:.28;
-    txt('boom',b.kind==='outerwall'?'外壁、大崩壊！！':b.kind==='sofa'?'ソファ、粉砕！':'ドッカーン！！');show('boom',true);
-    if(b.kind==='outerwall')showChaos('外に穴が開いた！ 足元注意！','wall',1.8);
-    else if(b.kind==='wall')showChaos('壁も近道に変えられた！','wall',1.3);
-    hudT=0;
+  if(name==='sofaTakeoff'){
+    showChaos('ソファ超え！！','sofa',1.4);
+    spawnDebris({...payload.sofa,x:payload.sofa.x,y:.55,z:payload.sofa.z,kind:'cushion',h:.85},'dog');
+    sound.tone(220,.45,.075,'triangle',900);sound.hiss(.2,.055,1250);
+    if(!data.reduced)shakeT=.24;
   }
-  if(name==='outerPlan'){
-    showChaos('外壁を壊す気だ！ その場から離れろ！','wall',1.7);
-    sound.tone(440,.18,.06,'sawtooth',120);
-  }
-  if(name==='fallStart'){
-    showChaos('外壁の穴から転落！！','wall',1.5);
-    txt('warning','足元がないっ！！');show('warning',true);warningT=.9;
-    sound.tone(870,.62,.065,'sawtooth',85);sound.hiss(.50,.06,900);
-    if(!data.reduced)shakeT=.33;
+  if(name==='sofaLand'){
+    spawnDebris({kind:'landing',x:payload.x,z:payload.z,y:0,w:.95,d:.95,h:.50},'dog');
+    sound.crash('boxes');sound.tone(260,.24,.045,'triangle',92);
+    txt('boom','ドスンッ！！');show('boom',true);boomT=.7;
+    if(!data.reduced)shakeT=.28;
   }
   if(name==='dominoStart'){showChaos('家具ドミノ発生！','domino',1.25);sound.tone(520,.16,.045,'triangle',210);}
   if(name==='domino'){
@@ -1293,7 +1216,7 @@ class ChaseAudio{
     hudT=0;
   }
   if(name==='milestone'){notice(payload.seconds+'秒突破。まだ、ごはんは渡さない。',2100);sound.tone(660,.1,.038);sound.tone(880,.16,.038,'triangle',880,.12);}
-  if(name==='caught'){summary={time:Math.floor(payload.time*100)/100,destroyed:payload.destroyed,damageYen:payload.damageYen,dominoCount:payload.dominoCount,rampages:payload.rampages,roombaHits:payload.roombaHits||0,snackBursts:payload.snackBursts||0,toys:payload.toys||0,reason:payload.reason||'caught',loopReads:payload.loopReads||0,view:'third',newBest:payload.time>data.best,test:testMode};if(!testMode&&summary.time>data.best){data.best=summary.time;save();}state='catch';catchT=0;game.player.speed=game.dog.speed=0;resetInput();sound.stop();sound.tone(392,.18,.055,'triangle',392);sound.tone(330,.18,.045,'triangle',330,.2);sound.tone(261,.43,.045,'triangle',261,.4);show('countdown',false);show('warning',false);txt('caughtBannerText',summary.reason==='fall'?'転落。':'確保。');txt('caughtBannerSub',summary.reason==='fall'?'家から落っこちた！':'はい、ごちそうさま。');show('caughtBanner',true);show('gameUI',false);}
+  if(name==='caught'){summary={time:Math.floor(payload.time*100)/100,destroyed:payload.destroyed,damageYen:payload.damageYen,dominoCount:payload.dominoCount,rampages:payload.rampages,roombaHits:payload.roombaHits||0,snackBursts:payload.snackBursts||0,toys:payload.toys||0,wallBreaches:payload.wallBreaches||0,sofaLeaps:payload.sofaLeaps||0,loopReads:payload.loopReads||0,view:'third',newBest:payload.time>data.best,test:testMode};if(!testMode&&summary.time>data.best){data.best=summary.time;save();}state='catch';catchT=0;game.player.speed=game.dog.speed=0;resetInput();sound.stop();sound.tone(392,.18,.055,'triangle',392);sound.tone(330,.18,.045,'triangle',330,.2);sound.tone(261,.43,.045,'triangle',261,.4);show('countdown',false);show('warning',false);show('caughtBanner',true);show('gameUI',false);}
  }
  function spawnDebris(b,by){const n=b.kind==='partition'?55:b.kind==='cushion'?36:b.kind==='landing'?24:b.kind==='cage'?16:b.kind==='boxes'||b.kind==='domino'?19:27;const actor=by==='player'?game.player:game.dog;for(let i=0;i<n;i++){const a=i*2.399963,yy=b.y+.25+((i*7)%19)/19*b.h;debris.push({x:b.x+Math.sin(a)*b.w*.25,y:yy,z:b.z+Math.cos(a)*b.d*.25,vx:Math.sin(a)*(1+i%5)+actor.velX*.25,vy:2+(i%7)*.5,vz:Math.cos(a)*(1+i%4)+actor.velZ*.25,rx:a,ry:a*.4,rz:a*.2,life:3.1+(i%5)*.3,age:0,floor:b.y,type:b.kind,w:b.kind==='cage'?.035:.18+(i%4)*.1,h:b.kind==='cage'?.65:.18+(i%3)*.12,d:['boxes','domino','partition','cushion','landing'].includes(b.kind)?.065:.025,color:b.kind==='cage'?'#8fa39b':b.kind==='partition'?['#e8dabe','#c38e5c','#f6eed9','#9b734e'][i%4]:b.kind==='cushion'?['#e8d69a','#9fc6a2','#f5ead8','#ecc281'][i%4]:b.kind==='landing'?'#c6b79e':b.kind==='boxes'||b.kind==='domino'?i%2?'#d2ac75':'#edddbb':i%4?'#ece1c8':'#a6865d'});}debris=debris.slice(-95);}
  function updateDebris(dt){for(const [idx,time] of fallenAnim)fallenAnim.set(idx,Math.min(.50,time+dt));for(let i=debris.length-1;i>=0;i--){const d=debris[i];d.age+=dt;if(d.age>d.life){debris.splice(i,1);continue}d.vy-=7.8*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;d.z+=d.vz*dt;d.rx+=d.vx*.9*dt;d.rz+=d.vz*.9*dt;if(d.y<d.floor+.05){d.y=d.floor+.05;d.vy=Math.abs(d.vy)*.2;d.vx*=Math.max(0,1-dt*5);d.vz*=Math.max(0,1-dt*5);} }}
@@ -1313,12 +1236,8 @@ class ChaseAudio{
   const sin=Math.sin(cam.yaw),cos=Math.cos(cam.yaw);
   return {x:sin*z-cos*x,z:cos*z+sin*x,sprint:false};
  }
- function updateHUD(){if(!game)return;txt('timer',fpsText(game.time));txt('damageMoney','¥'+game.damageYen.toLocaleString('ja-JP'));txt('chaosStage',['通常の逃走','カオス開始','ルンバも暴走','大パニック','カオスMAX'][game.chaosLevel]||'カオスMAX');txt('room','1F / '+CHASE.room(game.player.x,game.player.z,game.player.y)+(game.wallBroken.some((v,i)=>v&&CHASE.walls[i].outer)?' ・外壁に穴！':''));txt('distance','あと '+Math.max(.1,game.dogDistance).toFixed(1)+' m');$('vignette').style.opacity=data.reduced?'0':String(clamp((5-game.dogDistance)/4,0,.75));drawMap();}
- function drawMap(){const c=$('map'),g=c.getContext('2d'),w=c.width,h=c.height,p=game.player,f=0,s=8.8,cx=w/2,cz=h/2;g.clearRect(0,0,w,h);g.fillStyle='#edf0df';g.fillRect(cx-12*s,cz-10*s,24*s,20*s);g.strokeStyle='#afbd9e';g.lineWidth=2;g.strokeRect(cx-12*s,cz-10*s,24*s,20*s);for(let j=0;j<CHASE.fixed.length;j++){const a=CHASE.fixed[j];if(j<CHASE.walls.length?game.wallBroken[j]:game.furnitureBroken[j-CHASE.walls.length])continue;if(a.y>f*3.6+.2||a.y+a.h<f*3.6+.3)continue;g.fillStyle=['wall','outerwall'].includes(a.kind)?'#aaba9e':'#cbd3b9';g.fillRect(cx+(a.x-a.w/2)*s,cz+(a.z-a.d/2)*s,a.w*s,a.d*s);}for(let j=0;j<CHASE.walls.length;j++){
-      const a=CHASE.walls[j];if(!a.outer||!game.wallBroken[j])continue;
-      g.fillStyle='#e47745';g.fillRect(cx+(a.x-a.w/2)*s,cz+(a.z-a.d/2)*s,Math.max(2,a.w*s),Math.max(2,a.d*s));
-    }
-    for(let i=0;i<CHASE.breakables.length;i++){const a=CHASE.breakables[i];if(a.floor!==f||game.states[i].broken)continue;g.fillStyle=a.kind==='partition'?'#db9258':a.kind==='boxes'?'#d5b981':'#c3a978';g.fillRect(cx+(a.x-a.w/2)*s,cz+(a.z-a.d/2)*s,Math.max(2,a.w*s),Math.max(2,a.d*s));}
+ function updateHUD(){if(!game)return;txt('timer',fpsText(game.time));txt('damageMoney','¥'+game.damageYen.toLocaleString('ja-JP'));txt('chaosStage',['通常の逃走','カオス開始','ルンバも暴走','大パニック','カオスMAX'][game.chaosLevel]||'カオスMAX');txt('room','1F / '+CHASE.room(game.player.x,game.player.z,game.player.y));txt('distance','あと '+Math.max(.1,game.dogDistance).toFixed(1)+' m');$('vignette').style.opacity=data.reduced?'0':String(clamp((5-game.dogDistance)/4,0,.75));drawMap();}
+ function drawMap(){const c=$('map'),g=c.getContext('2d'),w=c.width,h=c.height,p=game.player,f=0,s=8.8,cx=w/2,cz=h/2;g.clearRect(0,0,w,h);g.fillStyle='#edf0df';g.fillRect(cx-12*s,cz-10*s,24*s,20*s);g.strokeStyle='#afbd9e';g.lineWidth=2;g.strokeRect(cx-12*s,cz-10*s,24*s,20*s);for(const a of CHASE.fixed){if(a.y>f*3.6+.2||a.y+a.h<f*3.6+.3)continue;g.fillStyle=a.kind==='wall'?'#aaba9e':'#cbd3b9';g.fillRect(cx+(a.x-a.w/2)*s,cz+(a.z-a.d/2)*s,a.w*s,a.d*s);}for(let i=0;i<CHASE.breakables.length;i++){const a=CHASE.breakables[i];if(a.floor!==f||game.states[i].broken)continue;g.fillStyle=a.kind==='partition'?'#db9258':a.kind==='boxes'?'#d5b981':'#c3a978';g.fillRect(cx+(a.x-a.w/2)*s,cz+(a.z-a.d/2)*s,Math.max(2,a.w*s),Math.max(2,a.d*s));}
   g.fillStyle='#698967';g.font='bold 14px sans-serif';g.fillText('1F',9,16);
   const mark=(a,col,rad)=>{g.fillStyle=col;g.beginPath();g.arc(cx+a.x*s,cz+a.z*s,rad,0,TAU);g.fill();g.strokeStyle='#fffced';g.lineWidth=2;g.stroke();};if(Math.abs(game.dog.y-p.y)<1.9)mark(game.dog,'#d08d35',5.3);mark(p,'#3b7656',5.3);g.strokeStyle='#326447';g.lineWidth=2;g.beginPath();g.moveTo(cx+p.x*s,cz+p.z*s);g.lineTo(cx+p.x*s+Math.sin(cam.yaw)*11,cz+p.z*s+Math.cos(cam.yaw)*11);g.stroke();
  }
@@ -1344,24 +1263,12 @@ class ChaseAudio{
   cam.target=target;
   return{eye,target,fov:cam.fov,level:0};
  }
- function itemsForScene(){const level=0;const cut=state!=='home';const cutY=1.08;const worldItem=it=>it.wall&&cut?{...it,cutHeight:cutY}:it;const items=art.items.filter(it=>it.floor==null||it.floor<=level).map(worldItem),transparent=[...art.contacts.filter(it=>it.floor<=level),...art.texItems.filter(it=>it.floor==null||it.floor<=level)];
-  for(const w of art.wallPieces){
-    if(game.wallBroken[w.index])continue;
-    const wobble=game.bash?.target.type==='wall'&&game.bash.target.index===w.index ? Math.sin(clock*48)*.045 : 0;
-    items.push(worldItem({...w,m:mul(trans(w.desc.x+wobble,w.desc.y,w.desc.z),rot(wobble*.1,1))}));
-  }
-  // Glowing amber edge strip where the exterior wall has been destroyed.
-  // It marks the fall hazard without adding an invisible collision barrier.
-  for(let wi=0;wi<CHASE.walls.length;wi++){
-    const w=CHASE.walls[wi];if(!w.outer||!game.wallBroken[wi])continue;
-    items.push({mesh:art.hazardMesh,m:trs([w.x,.10,w.z],[0,0,0],[w.w>.5?w.w:.10,.08,w.d>.5?w.d:.10]),cast:false});
-  }
-  for(let i=0;i<art.breaks.length;i++){const b=art.breaks[i],s=game.states[i];if(s.broken||b.floor>level)continue;let x=b.desc.x,z=b.desc.z;if(['door','fusuma'].includes(b.desc.kind)){if(b.desc.axis==='z')z+=s.open*b.desc.d*.89;else x+=s.open*b.desc.w*.89;}
-    const rumble=game.bash?.target.type==='breakable'&&game.bash.target.index===i ? Math.sin(clock*63)*.045 : 0;
+ function itemsForScene(){const level=0;const cut=state!=='home';const cutY=1.08;const worldItem=it=>it.wall&&cut?{...it,cutHeight:cutY}:it;const items=art.items.filter(it=>it.floor==null||it.floor<=level).map(worldItem),transparent=[...art.contacts.filter(it=>it.floor<=level),...art.texItems.filter(it=>it.floor==null||it.floor<=level)];for(let i=0;i<art.breaks.length;i++){const b=art.breaks[i],s=game.states[i];if(s.broken||b.floor>level)continue;let x=b.desc.x,z=b.desc.z;if(['door','fusuma'].includes(b.desc.kind)){if(b.desc.axis==='z')z+=s.open*b.desc.d*.89;else x+=s.open*b.desc.w*.89;}
+    const rumble=b.desc.kind==='partition'&&game.bash===i ? Math.sin(clock*63)*.045 : 0;
     items.push(worldItem({...b,m:mul(trans(x+rumble,b.desc.y,z),rot(rumble*.22,1))}));}
   // Tip-over furniture is separate, so a chain reaction can animate without a costly physics engine.
   for(const f of art.mobileFurniture){
-    if(f.floor>level||game.furnitureBroken[f.index])continue;
+    if(f.floor>level)continue;
     const d=f.desc,fall=fallenAnim.get(f.index)||0,eased=1-Math.pow(1-Math.min(fall/.48,1),3);
     const angle=game.fallen.has(f.index)?eased*1.14:0;
     const twist=(f.index%2?1:-1);
@@ -1387,10 +1294,14 @@ class ChaseAudio{
   }
   let d=game.dog,p=game.player;
   if(state==='home'){d={x:-8.2,y:0,z:4.1,yaw:Math.PI-.14,speed:0};p={x:-4.4,y:0,z:5.5,yaw:Math.PI+.22,speed:0};}
-  // Ground-based destructive charge only; the dog never jumps over furniture.
-  const dDisplay=game.bash?{...d,x:d.x+Math.sin(d.yaw)*Math.max(0,.20-game.bashT)*.8,
-    z:d.z+Math.cos(d.yaw)*Math.max(0,.20-game.bashT)*.8}:d;
-  items.push(...ART.dogItems(art,dDisplay,clock,game.bash?'bash':'run',state==='home'?1.15:1));
+  // Keep collision and shadow on the ground; lift the visible dog mesh across the sofa.
+  const jumping=game.leapLift>0&&state!=='home';
+  const displayDog=jumping?{...d,y:d.y+game.leapLift}:d;
+  items.push(...ART.dogItems(art,displayDog,clock,game.leap?'run':game.bash>=0?'bash':'run',state==='home'?1.15:1));
+  if(state!=='home'&&(game.leapApproach||game.leap)){
+    const glow=game.leap? .32 : .18;
+    transparent.push({mesh:art.shadow,m:trs([-8,.055,7.2],[0,0,0],[2.6,1,1.25]),tint:G3.rgb('#f8ab58'),alpha:glow,cast:false,double:true});
+  }
   if(game.boxHeadT>0&&state!=='home'){
     const b=Math.sin(clock*14)*.08;
     items.push({mesh:art.helmet,m:mul(trs([d.x,d.y,d.z],[0,d.yaw,0],[.9,.9,.9]),mul(trans(0,1.25,.85),rot(b,2))),cast:false,double:true});
@@ -1405,10 +1316,9 @@ class ChaseAudio{
   return [...items,...transparent];
  }
  function render(dt){if(!renderer||!art)return;const c=camera(dt);renderer.render(itemsForScene(),c.eye,c.target,c.fov,c.level);stats.maxCalls=Math.max(stats.maxCalls,renderer.draws);}
- function showResult(){show('caughtBanner',false);show('results',true);state='result';txt('finalTime',fpsText(summary.time));txt('rank',rank(summary.time));txt('recordTag',testMode?'テストプレイ（記録対象外）':summary.newBest?'新記録！':'本日のごはん係');txt('finalDamage',summary.destroyed+' か所');txt('finalMoney','¥'+summary.damageYen.toLocaleString('ja-JP'));txt('finalBest',fpsText(data.best)+' 秒');txt('resultTitle',summary.reason==='fall'?'家から、落ちた。':'ごはんは、守れなかった。');
-  txt('resultReason',summary.reason==='fall'?'外壁の穴から転落！ 逃げる方向には要注意。':summary.destroyed>=9?'家ごと壊す気だ。保険、入ってた？':summary.snackBursts>0?'おやつ袋まで爆発。家の片付け、誰がする？':summary.destroyed>=5?'犬は元気です。家は、まあ、その。':summary.time<8?'障害物を使って距離をつくろう！':'最後まで、ごはんは離さなかった。');syncOptions();}
+ function showResult(){show('caughtBanner',false);show('results',true);state='result';txt('finalTime',fpsText(summary.time));txt('rank',rank(summary.time));txt('recordTag',testMode?'テストプレイ（記録対象外）':summary.newBest?'新記録！':'本日のごはん係');txt('finalDamage',summary.destroyed+' か所');txt('finalWalls',summary.wallBreaches+' 回');txt('finalLeaps',summary.sofaLeaps+' 回');txt('finalMoney','¥'+summary.damageYen.toLocaleString('ja-JP'));txt('finalBest',fpsText(data.best)+' 秒');txt('resultReason',summary.wallBreaches&&summary.sofaLeaps?'壁もソファも突破。ごはんへの執念が怖い。':summary.sofaLeaps?'ソファ越えはズルい。犬は反則です。':summary.wallBreaches?'犬が自分で近道を作った。修理費は誰が払う？':summary.snackBursts>0?'おやつ袋まで爆発。家の片付け、誰がする？':summary.destroyed>=5?'犬は元気です。家は、まあ、その。':summary.time<8?'曲がり角を使って距離をつくろう！':'最後まで、ごはんは離さなかった。');syncOptions();}
  function publicURL(){if(!/^https?:$/.test(location.protocol)||['localhost','127.0.0.1'].includes(location.hostname))return'';return location.origin+location.pathname;}
- function shareText(){return 'ごはん持って逃げたら、家が犠牲になった。\n「ごはん、まだ！」で '+fpsText(summary.time)+'秒逃げました！\n家の被害総額：¥'+summary.damageYen.toLocaleString('ja-JP')+'！\n倒れた・壊れたもの：'+summary.destroyed+'か所。\nあなたは何秒、逃げられる？\n'+(publicURL()?publicURL()+'\n':'')+'#ごはんまだ #アソビート';}
+ function shareText(){return 'ごはん持って逃げたら、家が犠牲になった。\n「ごはん、まだ！」で '+fpsText(summary.time)+'秒逃げました！\n家の被害総額：¥'+summary.damageYen.toLocaleString('ja-JP')+'！\n倒れた・壊れたもの：'+summary.destroyed+'か所。\n壁破壊 '+summary.wallBreaches+'回／ソファジャンプ '+summary.sofaLeaps+'回\nあなたは何秒、逃げられる？\n'+(publicURL()?publicURL()+'\n':'')+'#ごはんまだ #アソビート';}
  async function makeCard(){if(!summary)return;const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=630;const c=canvas.getContext('2d');c.fillStyle='#fff7e5';c.fillRect(0,0,1200,630);c.fillStyle='#d9e5d1';c.fillRect(718,0,482,630);
   // Always put a real in-game voxel dog on the card. A blank WebGL capture
   // must never become a black rectangle in an X share preview.
@@ -1420,7 +1330,7 @@ class ChaseAudio{
     c.fillStyle=bg;c.fillRect(718,0,482,630);
     c.fillStyle='#fce8bb';c.font='900 75px sans-serif';c.fillText('🐕',820,320);
   }
-  c.fillStyle='#386650';c.font='800 18px sans-serif';c.fillText('ASOBEAT / PIXEL CHAOS',55,56);c.font='950 67px sans-serif';c.fillText('ごはん、まだ！',48,151);c.font='750 24px sans-serif';c.fillStyle='#839175';c.fillText('ごはんを守った時間',55,221);c.fillStyle='#367455';c.font='950 142px sans-serif';c.fillText(fpsText(summary.time),48,364);c.font='850 32px sans-serif';c.fillText('秒',600,356);c.font='750 26px sans-serif';c.fillStyle='#698663';c.fillText(rank(summary.time),55,420);c.fillStyle='#e9edda';c.fillRect(52,455,605,65);c.fillStyle='#6e7954';c.font='800 23px sans-serif';c.fillText('家の被害額  ¥'+summary.damageYen.toLocaleString('ja-JP')+' / '+summary.destroyed+'か所',73,496);c.font='650 17px sans-serif';c.fillStyle='#819478';c.fillText('外壁まで壊してくるゴールデンから逃げろ！',56,554);c.font='600 15px sans-serif';c.fillText(publicURL().replace(/^https?:\/\//,'')||'無料・インストール不要 / ASOBEAT',56,592,625);
+  c.fillStyle='#386650';c.font='800 18px sans-serif';c.fillText('ASOBEAT / PIXEL CHAOS',55,56);c.font='950 67px sans-serif';c.fillText('ごはん、まだ！',48,151);c.font='750 24px sans-serif';c.fillStyle='#839175';c.fillText('ごはんを守った時間',55,221);c.fillStyle='#367455';c.font='950 142px sans-serif';c.fillText(fpsText(summary.time),48,364);c.font='850 32px sans-serif';c.fillText('秒',600,356);c.font='750 26px sans-serif';c.fillStyle='#698663';c.fillText(rank(summary.time),55,420);c.fillStyle='#e9edda';c.fillRect(52,455,605,65);c.fillStyle='#6e7954';c.font='800 23px sans-serif';c.fillText('家の被害額  ¥'+summary.damageYen.toLocaleString('ja-JP')+' / '+summary.destroyed+'か所',73,496);c.font='650 17px sans-serif';c.fillStyle='#819478';c.fillText('壁 '+summary.wallBreaches+'回突破 / ソファジャンプ '+summary.sofaLeaps+'回。片手で逃走！',56,554);c.font='600 15px sans-serif';c.fillText(publicURL().replace(/^https?:\/\//,'')||'無料・インストール不要 / ASOBEAT',56,592,625);
   cardBlob=await new Promise(r=>canvas.toBlob(r,'image/png'));if(cardURL)URL.revokeObjectURL(cardURL);cardURL=URL.createObjectURL(cardBlob);$('cardImg').src=cardURL;$('cardSave').href=cardURL;}
  function bind(){
   $('startBtn').onclick=begin;
