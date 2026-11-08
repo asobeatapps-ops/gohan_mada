@@ -78,6 +78,7 @@ body.touch .pcHint{display:none}
 .result-ad-slot{display:block;margin:24px auto 0;max-width:100%;text-align:center;min-height:0}
 .result-ad-slot[hidden]{display:none!important}
 </style>
+<style id="asobeat-howto-style">.asobeat-howto{box-sizing:border-box;width:100%;flex-shrink:0;margin:12px 0;padding:10px 12px;border:1px solid #b9cbbb;border-radius:12px;background:#fff9e9f0;color:#315c47;text-align:left;font-size:12px;line-height:1.6}.asobeat-howto strong{display:block;font-size:12px;margin:0 0 4px}.asobeat-howto p{margin:3px 0;font-size:inherit;line-height:inherit;color:inherit}#home .asobeat-howto{margin:0 0 8px;padding:9px 11px;font-size:11px;line-height:1.55}#home .home-bottom{max-height:calc(100dvh - 76px);overflow-y:auto}</style>
 </head><body>
 <canvas id="view" aria-label="広い平屋を逃げ回る3Dゲーム"></canvas>
 <div id="gameUI" hidden>
@@ -96,7 +97,7 @@ body.touch .pcHint{display:none}
 <section id="home" class="splash" hidden>
  <div class="home-top"><a class="brand asobeat-home-link" href="https://asobeatapps-ops.github.io/gamehome/" aria-label="ASOBEAT ゲームホームへ戻る"><i></i> ASOBEAT</a><div class="edition">PIXEL CHASE / Ver.1.6.0</div></div>
  <div class="home-copy"><div class="eyebrow">ぐるぐる逃げても、犬は学習する。</div><h1>ごはん、<br><span>まだ！</span></h1><p class="home-sub">その手のカリカリ、もうバレてます。<br>逃げるあなた。追う愛犬。<br><strong>犠牲になるのは、家。そしてソファ。</strong></p></div>
- <div class="home-bottom"><p class="onehand-slogan">📱 どこからでもスワイプ。速度一定、カメラ固定。</p><button id="startBtn" class="primary">ごはんを持って、逃げる！　→</button><div class="home-foot"><button class="quiet" id="howBtn">あそび方</button><button class="quiet" id="settingsBtn">音・画質</button><button class="quiet" id="bestLabel">最高 0.00 秒</button></div><p class="orient">触れた位置から指を動かすだけ。歩く・走るの切り替えなし。</p></div>
+ <div class="home-bottom"><aside class="asobeat-howto" aria-label="操作方法"><strong>操作方法</strong><p>スマホ：画面の好きな場所に触れ、そのまま動かした方向へ走ります。指を離すと停止。</p><p>PC：WASD／矢印キーで移動。Escで一時停止。</p><p>犬に捕まらないように逃げて、長い生存時間を目指そう。</p></aside><button id="startBtn" class="primary">ごはんを持って、逃げる！　→</button><div class="home-foot"><button class="quiet" id="howBtn">あそび方</button><button class="quiet" id="settingsBtn">音・画質</button><button class="quiet" id="bestLabel">最高 0.00 秒</button></div><p class="orient">触れた位置から指を動かすだけ。歩く・走るの切り替えなし。</p></div>
  <div class="home-credit">オリジナル3Dモデル / 犬にも人にも、ケガはありません。</div>
 </section>
 <section class="modal" id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel"><div class="brand"><i></i> HOW TO PLAY</div><h2 id="helpTitle">待て、が通じない。</h2><div class="rules"><div class="rule"><div><b>すでに、見つかっています。</b>3・2・1で開始。広い平屋を逃げ回り、捕まるまでの時間で勝負。</div></div><div class="rule"><div><b>親指ひとつで、走る。</b>好きな場所に触れ、動かした方向へ走ります。スピードは常に一定、指を離すと停止します。</div></div><div class="rule"><div><b>ドアと家具を味方に。</b>室内の引き戸は近づくと開き、通った後に閉まります。犬は閉じた戸を破壊します。段ボール・空のケージはぶつかって壊すこともできます。</div></div><div class="rule"><div><b>20秒から家が大騒ぎ！</b>暴走ゴールデン・家具ドミノ・段ボール犬に加え、同じ場所を回ると犬が学習。薄い間仕切りを破壊し、ソファまで飛び越えます。</div></div></div><p class="subtitle">PC：WASD／矢印キーで移動。速度一定、視点固定。Escで一時停止。</p><button id="closeHelp" class="primary">わかった！</button></div></section>
