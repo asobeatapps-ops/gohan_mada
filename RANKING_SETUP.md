@@ -2,6 +2,10 @@
 
 このゲーム専用の**新しいFirebaseプロジェクト**を使います。他のゲームの既存プロジェクトやルールは変更しません。ChatGPTのFirebaseプラグインは必須ではありません。
 
+## 接続先
+
+専用プロジェクト `asobeat-gohan-ranking` とWebアプリ `1:768092729141:web:6b6ad0266f1e28c960267c` を作成済みです。公開Web設定は `firebase-config.js` へ反映済みです。匿名認証とFirestoreの設定が完了してから公開します。
+
 ## 1. プロジェクトとWebアプリを作る
 
 1. https://console.firebase.google.com/ をGoogleアカウントで開き、「プロジェクトを作成」を選びます。
@@ -14,7 +18,7 @@
 
 ## 2. 匿名認証
 
-Authentication → 始める → ログイン方法 → **匿名**を有効にします。設定の承認済みドメインには `asobeatapps-ops.github.io` を追加します。ローカル実機確認を行う場合のみ、必要なローカルドメインも追加します。
+`firebase.json` の `auth.providers.anonymous` を有効にしています。`npx -y firebase-tools@latest deploy --only auth --project asobeat-gohan-ranking` を実行するか、Authentication → 始める → ログイン方法 → **匿名**を有効にします。設定の承認済みドメインには `asobeatapps-ops.github.io` を追加します。ローカル実機確認を行う場合のみ、必要なローカルドメインも追加します。
 
 プレイヤーは会員登録やGoogleログインをせずに参加できます。同じブラウザで1ユーザーとなり、別端末やブラウザデータ削除後は別ユーザーになります。
 
@@ -27,8 +31,8 @@ Firestore Database → データベースを作成 → Standardエディショ�
 このリポジトリの `firestore.rules` と `firestore.indexes.json` を、このゲーム専用プロジェクトへ反映します。ローカルPCでFirebase CLIを使う場合：
 
 ```sh
-npx firebase-tools login
-npx firebase-tools deploy --only firestore:rules,firestore:indexes --project YOUR_GAME_PROJECT_ID
+npx -y firebase-tools@latest login
+npx -y firebase-tools@latest deploy --only firestore:rules,firestore:indexes --project asobeat-gohan-ranking
 ```
 
 `YOUR_GAME_PROJECT_ID` は、このゲーム専用プロジェクトの実際のIDに置き換えます。もう一方のゲームのIDを指定しないでください。管理画面で反映する場合は、Firestoreの「ルール」にファイル内容を貼り付けて公開し、「インデックス」に `leaderboard` / `score` 降順 / `achievedAt` 昇順 / コレクションを作成します。インデックス作成完了まで待ちます。
