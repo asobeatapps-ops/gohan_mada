@@ -1,0 +1,8 @@
+{
+  "name": "asobeat-gohan-mada",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/leaderboard-service.test.mjs"
+  }
+}
